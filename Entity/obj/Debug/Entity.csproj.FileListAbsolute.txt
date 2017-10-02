@@ -1,0 +1,5 @@
+C:\Users\Wissen\Source\Repos\egitim5\Entity\bin\Debug\Entity.dll
+C:\Users\Wissen\Source\Repos\egitim5\Entity\bin\Debug\Entity.pdb
+C:\Users\Wissen\Source\Repos\egitim5\Entity\obj\Debug\Entity.csprojResolveAssemblyReference.cache
+C:\Users\Wissen\Source\Repos\egitim5\Entity\obj\Debug\Entity.dll
+C:\Users\Wissen\Source\Repos\egitim5\Entity\obj\Debug\Entity.pdb
