@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Entity
 {
-    class Makale
+    public class Makale
     {
         [Key]
         public int MakaleID { get; set; }
