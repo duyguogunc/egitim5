@@ -8,8 +8,9 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace Entity
-{  [Table("TblKullanici")]
-   public class Kullanici
+{
+    [Table("TblKullanici")]
+    public class Kullanici
     {
         [Key]
         public int KullaniciID { get; set; }
