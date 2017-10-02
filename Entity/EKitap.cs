@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Entity
 {
-    class EKitap
+    public class EKitap
     {
         [Key]
         public int EKitapID { get; set; }
