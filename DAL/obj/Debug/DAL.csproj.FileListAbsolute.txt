@@ -1,0 +1,5 @@
+C:\Users\Wissen\Source\Repos\egitim5\DAL\bin\Debug\DAL.dll
+C:\Users\Wissen\Source\Repos\egitim5\DAL\bin\Debug\DAL.pdb
+C:\Users\Wissen\Source\Repos\egitim5\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
+C:\Users\Wissen\Source\Repos\egitim5\DAL\obj\Debug\DAL.dll
+C:\Users\Wissen\Source\Repos\egitim5\DAL\obj\Debug\DAL.pdb

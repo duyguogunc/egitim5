@@ -1,0 +1,5 @@
+C:\Users\Wissen\Source\Repos\egitim5\Business\bin\Debug\Business.dll
+C:\Users\Wissen\Source\Repos\egitim5\Business\bin\Debug\Business.pdb
+C:\Users\Wissen\Source\Repos\egitim5\Business\obj\Debug\Business.csprojResolveAssemblyReference.cache
+C:\Users\Wissen\Source\Repos\egitim5\Business\obj\Debug\Business.dll
+C:\Users\Wissen\Source\Repos\egitim5\Business\obj\Debug\Business.pdb
