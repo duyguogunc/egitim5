@@ -6,10 +6,9 @@ using System.Threading.Tasks;
 
 namespace Business
 {
-  public class Repository
-    {
+  
       public class VideoRep : BaseRepository<Video> { }
       public class MakaleRep : BaseRepository<Makale> { }
       public class EkitapRep : BaseRepository<EKitap> { }
-    }
+  
 }
