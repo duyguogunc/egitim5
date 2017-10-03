@@ -1,8 +1,10 @@
-﻿using System;
+﻿using DAL;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Microsoft.AspNet.Identity.EntityFramework;
 
 namespace Business
 {
@@ -16,7 +18,7 @@ namespace Business
       }
       public T GetById(int id)
       {
-          return db.Set<T>.Find(id);
+          return db.Set<T>().Find(id);
       }
       public void Insert(T obj)
       {
@@ -25,8 +27,8 @@ namespace Business
       }
       public void Delete(int id)
       {
-          var obj = db.Set<T>.Find(id);
-          db.Set<T>.Remove(obj);
+          var obj = db.Set<T>().Find(id);
+          db.Set<T>().Remove(obj);
           db.SaveChanges();
       }
       public void Update(T obj)
