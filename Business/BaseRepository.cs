@@ -18,7 +18,7 @@ namespace Business
       {
           return db.Set<T>.Find(id);
       }
-      public void Inset(T obj)
+      public void Insert(T obj)
       {
           db.Set<T>().Add(obj);
           db.SaveChanges();
