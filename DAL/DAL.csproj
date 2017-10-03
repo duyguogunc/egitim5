@@ -57,6 +57,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="MyContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -65,6 +66,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Egitim5\Egitim5.csproj">
+      <Project>{01F50C22-4BD5-4040-8B08-364534C06AE6}</Project>
+      <Name>Egitim5</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Entity\Entity.csproj">
       <Project>{C8BDA162-2E73-460E-87DA-9445CE657B93}</Project>
       <Name>Entity</Name>
