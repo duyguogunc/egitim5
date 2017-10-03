@@ -67,3 +67,7 @@ C:\Users\Wissen\Source\Repos\egitim5\Egitim5\bin\Microsoft.Owin.Security.Microso
 C:\Users\Wissen\Source\Repos\egitim5\Egitim5\obj\Debug\Egitim5.csprojResolveAssemblyReference.cache
 C:\Users\Wissen\Source\Repos\egitim5\Egitim5\obj\Debug\Egitim5.dll
 C:\Users\Wissen\Source\Repos\egitim5\Egitim5\obj\Debug\Egitim5.pdb
+C:\Users\Wissen\Source\Repos\egitim5\Egitim5\bin\Entity.dll
+C:\Users\Wissen\Source\Repos\egitim5\Egitim5\bin\Entity.pdb
+C:\Users\Wissen\Source\Repos\egitim5\Egitim5\bin\DAL.dll
+C:\Users\Wissen\Source\Repos\egitim5\Egitim5\bin\DAL.pdb

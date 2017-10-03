@@ -13,8 +13,7 @@ namespace Entity
     [Table("TblKullanici")]
     public class Kullanici:IdentityUser
     {
-        [Key]
-        public int KullaniciID { get; set; }
+       
         [Required]
         [DisplayName("İsim Soyisim")]
         public string AdSoyad { get; set; }

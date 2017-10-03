@@ -1,4 +1,6 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 
 namespace Egitim5.Models
@@ -79,6 +81,15 @@ namespace Egitim5.Models
         [Display(Name = "Confirm password")]
         [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
         public string ConfirmPassword { get; set; }
+        
+        [Required]
+        [DisplayName("İsim Soyisim")]
+        public string AdSoyad { get; set; }
+        public string Meslek { get; set; }
+        public string WebSitesi { get; set; }
+        [DisplayName("Doğum Tarihi")]
+        public DateTime DogumTarihi { get; set; }
+        public string Resim { get; set; }
     }
 
     public class ResetPasswordViewModel
