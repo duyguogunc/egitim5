@@ -10,11 +10,12 @@ using System.Threading.Tasks;
 
 namespace DAL
 {
-    class MyContext :IdentityDbContext<Kullanici>
+    public class MyContext : IdentityDbContext<Kullanici>
     {
+        
         public virtual DbSet<Video> Videolar { get; set; }
         public virtual DbSet<Makale> Makaleler { get; set; }
         public virtual DbSet<EKitap> EKitaplar { get; set; }
-       
+
     }
 }

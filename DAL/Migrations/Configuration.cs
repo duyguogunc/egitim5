@@ -1,6 +1,7 @@
 namespace DAL.Migrations
 {
     using Egitim5.Models;
+    using Entity;
     using Microsoft.AspNet.Identity;
     using Microsoft.AspNet.Identity.EntityFramework;
     using System;
@@ -21,9 +22,9 @@ namespace DAL.Migrations
             if (context.Users.Count() == 0)
             {
                 #region kullaniciEkle
-                UserStore<ApplicationUser> str = new UserStore<ApplicationUser>(context);
+                UserStore<Kullanici> str = new UserStore<Kullanici>(context);
 
-                UserManager<ApplicationUser> mng = new UserManager<ApplicationUser>(str);
+                UserManager<Kullanici> mng = new UserManager<Kullanici>(str);
 
                 var admin = new ApplicationUser() { Email = "admin@yaz5.com", UserName = "admin@yaz5.com" };
                 var videomoderator = new ApplicationUser() { Email = "videomoderator@yaz5.com", UserName = "videomoderator@yaz5.com" };
