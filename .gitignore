@@ -4,3 +4,13 @@
 
 /.vs/Egitim5/v14/.suo
 /DAL/DAL.csproj.user
+/Egitim5/bin/
+/Egitim5/obj/
+/Entity/bin/
+/Entity/obj/
+/DAL/bin/
+/DAL/obj/
+/API/bin/
+/API/obj/
+/Business/bin/
+/Business/obj/
