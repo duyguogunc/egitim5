@@ -24,9 +24,6 @@ namespace Entity
         [DisplayName("Doğum Tarihi")]
         public DateTime DogumTarihi { get; set; }
         public string Resim { get; set; }
-        public Kullanici()
-        {
-            DogumTarihi = DateTime.Today;
-        }
+     
     }
 }
