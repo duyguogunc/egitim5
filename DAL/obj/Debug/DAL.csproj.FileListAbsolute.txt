@@ -1,0 +1,16 @@
+C:\Users\Wissen\Source\Repos\egitim5\DAL\bin\Debug\DAL.dll.config
+C:\Users\Wissen\Source\Repos\egitim5\DAL\bin\Debug\DAL.dll
+C:\Users\Wissen\Source\Repos\egitim5\DAL\bin\Debug\DAL.pdb
+C:\Users\Wissen\Source\Repos\egitim5\DAL\bin\Debug\EntityFramework.dll
+C:\Users\Wissen\Source\Repos\egitim5\DAL\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Wissen\Source\Repos\egitim5\DAL\bin\Debug\EntityFramework.xml
+C:\Users\Wissen\Source\Repos\egitim5\DAL\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Wissen\Source\Repos\egitim5\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
+C:\Users\Wissen\Source\Repos\egitim5\DAL\obj\Debug\DAL.dll
+C:\Users\Wissen\Source\Repos\egitim5\DAL\obj\Debug\DAL.pdb
+C:\Users\Wissen\Source\Repos\egitim5\DAL\bin\Debug\Entity.dll
+C:\Users\Wissen\Source\Repos\egitim5\DAL\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+C:\Users\Wissen\Source\Repos\egitim5\DAL\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\Wissen\Source\Repos\egitim5\DAL\bin\Debug\Entity.pdb
+C:\Users\Wissen\Source\Repos\egitim5\DAL\bin\Debug\Microsoft.AspNet.Identity.Core.xml
+C:\Users\Wissen\Source\Repos\egitim5\DAL\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
