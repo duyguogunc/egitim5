@@ -9,6 +9,10 @@ using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
 using Egitim5.Models;
+using Entity;
+using Microsoft.AspNet.Identity.EntityFramework;
+using System.Data.Entity;
+using DAL;
 
 namespace Egitim5.Controllers
 {
@@ -20,6 +24,7 @@ namespace Egitim5.Controllers
 
         public AccountController()
         {
+      
         }
 
         public AccountController(ApplicationUserManager userManager, ApplicationSignInManager signInManager )
@@ -149,13 +154,30 @@ namespace Egitim5.Controllers
         [ValidateAntiForgeryToken]
         public async Task<ActionResult> Register(RegisterViewModel model)
         {
+
             if (ModelState.IsValid)
             {
-                var user = new ApplicationUser { UserName = model.Email, Email = model.Email };
-                var result = await UserManager.CreateAsync(user, model.Password);
+                /*UserStore<Kullanici> str = new UserStore<Kullanici>();
+                UserManager<Kullanici> mng = new UserManager<Kullanici>(str);
+                UserManager<Kullanici, string> mng2 = new UserManager<Kullanici, string>(str);
+                eklendi. Çünkü  user hata veriyordu. GoToDef ten kaynağı bulunup tanımlama yapıldı.*/
+
+                UserStore<Kullanici> str = new UserStore<Kullanici>();
+                UserManager<Kullanici> mng = new UserManager<Kullanici>(str);
+
+                UserManager<Kullanici,string> mng2 = new UserManager<Kullanici,string>(str);
+
+                //var user = new ActionResult { UserName = model.Email, Email = model.Email) aşağıdaki şekilde düzenlendi. 
+
+                Kullanici user = new Kullanici { UserName = model.Email, Email = model.Email, AdSoyad=model.AdSoyad, DogumTarihi=model.DogumTarihi, Meslek=model.Meslek, Resim=model.Resim, WebSitesi=model.WebSitesi};
+
+                //çalıştırıldığında aşağıdaki satırda hata alınıyor.
+                var result = await mng.CreateAsync(user, model.Password);
                 if (result.Succeeded)
                 {
-                    await SignInManager.SignInAsync(user, isPersistent:false, rememberBrowser:false);
+                    SignInManager<Kullanici,string> smng =new SignInManager<Kullanici,string>(mng2, AuthenticationManager);
+
+                    await smng.SignInAsync(user, isPersistent:false, rememberBrowser:false);
                     
                     // For more information on how to enable account confirmation and password reset please visit http://go.microsoft.com/fwlink/?LinkID=320771
                     // Send an email with this link
@@ -170,6 +192,7 @@ namespace Egitim5.Controllers
 
             // If we got this far, something failed, redisplay form
             return View(model);
+
         }
 
         //
