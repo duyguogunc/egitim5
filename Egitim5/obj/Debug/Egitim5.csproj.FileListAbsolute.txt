@@ -71,3 +71,11 @@ C:\Users\Wissen\Source\Repos\egitim5\Egitim5\bin\Entity.dll
 C:\Users\Wissen\Source\Repos\egitim5\Egitim5\bin\Entity.pdb
 C:\Users\Wissen\Source\Repos\egitim5\Egitim5\bin\DAL.dll
 C:\Users\Wissen\Source\Repos\egitim5\Egitim5\bin\DAL.pdb
+C:\Users\Wissen\Source\Repos\egitim5\Egitim5\bin\Business.dll
+C:\Users\Wissen\Source\Repos\egitim5\Egitim5\bin\System.Net.Http.Formatting.dll
+C:\Users\Wissen\Source\Repos\egitim5\Egitim5\bin\System.Web.Http.dll
+C:\Users\Wissen\Source\Repos\egitim5\Egitim5\bin\System.Web.Http.WebHost.dll
+C:\Users\Wissen\Source\Repos\egitim5\Egitim5\bin\Business.pdb
+C:\Users\Wissen\Source\Repos\egitim5\Egitim5\bin\System.Net.Http.Formatting.xml
+C:\Users\Wissen\Source\Repos\egitim5\Egitim5\bin\System.Web.Http.xml
+C:\Users\Wissen\Source\Repos\egitim5\Egitim5\bin\System.Web.Http.WebHost.xml
