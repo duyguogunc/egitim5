@@ -26,10 +26,10 @@ namespace DAL.Migrations
 
                 UserManager<Kullanici> mng = new UserManager<Kullanici>(str);
 
-                var admin = new ApplicationUser() { Email = "admin@yaz5.com", UserName = "admin@yaz5.com" };
-                var videomoderator = new ApplicationUser() { Email = "videomoderator@yaz5.com", UserName = "videomoderator@yaz5.com" };
-                var makalemoderator = new ApplicationUser() { Email = "makalemoderator@yaz5.com", UserName = "makalemoderator@yaz5.com" };
-                var ekitapmoderator = new ApplicationUser() { Email = "ekitapmoderator@yaz5.com", UserName = "ekitapmoderator@yaz5.com" };
+                var admin = new Kullanici() { Email = "admin@yaz5.com", UserName = "admin@yaz5.com" };
+                var videomoderator = new Kullanici() { Email = "videomoderator@yaz5.com", UserName = "videomoderator@yaz5.com" };
+                var makalemoderator = new Kullanici() { Email = "makalemoderator@yaz5.com", UserName = "makalemoderator@yaz5.com" };
+                var ekitapmoderator = new Kullanici() { Email = "ekitapmoderator@yaz5.com", UserName = "ekitapmoderator@yaz5.com" };
 
 
                 mng.Create(admin, "Aa123456!"); //2. parametre þifresi
