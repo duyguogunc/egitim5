@@ -5,8 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title - My ASP.NET Application</title>
     @Styles.Render("~/Content/css")
+    @Styles.Render("~/Content/LightboxCSS")
+    @Styles.Render("~/Content/SelectizeCSS")
     @Scripts.Render("~/bundles/modernizr")
-
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.1.0/css/font-awesome.min.css" />
 </head>
 <body>
     <div class="navbar-wrapper">
@@ -78,6 +80,9 @@
 
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/Content/LightboxJS")
+    @Scripts.Render("~/Content/SelectizeJS")
+    @Scripts.Render("~/MainScript")
     @RenderSection("scripts", required: false)
     
     <div class="container" id="wrapper">@RenderBody()</div>

@@ -52,3 +52,40 @@ border: none;
     background: #fff;
 }
 #wrapper{margin-top:50px;}
+
+
+/*
+     __   __  _______  ______   _______  ___     
+|  |_|  ||       ||      | |   _   ||   |    
+|       ||   _   ||  _    ||  |_|  ||   |    
+|       ||  | |  || | |   ||       ||   |    
+|       ||  |_|  || |_|   ||       ||   |___ 
+| ||_|| ||       ||       ||   _   ||       |
+|_|   |_||_______||______| |__| |__||_______|
+
+*/
+
+
+.center {
+    margin-top:50px;   
+}
+
+.modal-header {
+	padding-bottom: 5px;
+}
+
+.modal-footer {
+    	padding: 0;
+	}
+    
+.modal-footer .btn-group button {
+	height:40px;
+	border-top-left-radius : 0;
+	border-top-right-radius : 0;
+	border: none;
+	border-right: 1px solid #ddd;
+}
+	
+.modal-footer .btn-group:last-child > button {
+	border-right: 0;
+}

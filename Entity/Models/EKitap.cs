@@ -19,7 +19,7 @@ namespace Entity
         [Required]
         public string EKitapIcerik { get; set; }
         public DateTime EklenmeTarihi { get; set; }
-     
+        public string EKitapURL { get; set; }
         public List<Konu> EKitapinKonusu { get; set; }
         public EKitap()
         {

@@ -20,9 +20,9 @@ namespace Entity.Models
         [DisplayName("Konu İçerik")]
         public string KonuIcerik { get; set; }
         public virtual List<Konu> AltKonular { get; set; }
-        public Konu UstKonu { get; set; }
-        public List<EKitap> KonununEkitaplari { get; set; }
-        public List<Video> KonununVideolari{ get; set; }
-        public List<Makale> KonununMakaleleri { get; set; }
+        public virtual Konu UstKonu { get; set; }
+        public virtual List<EKitap> KonununEkitaplari { get; set; }
+        public virtual List<Video> KonununVideolari{ get; set; }
+        public virtual List<Makale> KonununMakaleleri { get; set; }
     }
 }

@@ -1,0 +1,29 @@
+﻿@using Entity
+@using Entity.Models
+@model EKitap
+@{
+    ViewBag.Title = "Detay";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>@Model.EKitapBaslik</h1>
+
+<p>@Model.EKitapIcerik</p>
+<hr />
+<a href="/Content/EkitapUpload/@Model.EKitapURL">İndir</a>
+<hr />
+
+<i>@Model.EklenmeTarihi.ToLongDateString()</i>
+<p>
+    @if (Model.EKitapinKonusu != null && Model.EKitapinKonusu.Count != 0)
+    {
+        foreach (Konu konu in Model.EKitapinKonusu)
+        {
+            <i>@konu.KonuBaslik</i> <text>,</text>
+        }
+    }
+</p>
+@if (Model.EKitapinKonusu != null)
+{
+    Html.Action("IlgiliKitaplar", new { id = Model.EKitapID });
+}

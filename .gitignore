@@ -2,15 +2,19 @@
 # This .gitignore file was automatically created by Microsoft(R) Visual Studio.
 ################################################################################
 
-/.vs/Egitim5/v14/.suo
-/DAL/DAL.csproj.user
-/Egitim5/bin/
-/Egitim5/obj/
-/Entity/bin/
-/Entity/obj/
-/DAL/bin/
-/DAL/obj/
 /API/bin/
 /API/obj/
 /Business/bin/
 /Business/obj/
+/Egitim5/bin/
+/Egitim5/obj/
+/DAL/bin/
+/DAL/obj/
+/Entity/bin/
+/Entity/obj/
+/Utility/bin/
+/Utility/obj/
+/.vs/Egitim5/v14/.suo
+/DAL/DAL.csproj.user
+
+/Egitim5/Content/EkitapUpload
