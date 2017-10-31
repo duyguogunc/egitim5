@@ -1,0 +1,68 @@
+﻿@using Entity
+@using Entity.Models
+@model IEnumerable<Makale>
+@{
+    ViewBag.Title = "Makaleler";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@section CSS{
+    @Styles.Render("~/Content/LightboxCSS")
+    @Styles.Render("~/Content/MultiSelectCSS")
+}
+@section Scripts{
+    @Scripts.Render("~/Content/MultiSelectJS")
+    @Scripts.Render("~/Content/LightboxJS")
+}
+<div class="container">
+    @if (User.IsInRole("Admin") || User.IsInRole("MakaleModerator"))
+    {
+        <div class="adminbuttons"><button data-toggle="modal" data-target="#ekleForm" class="btn btn-primary center-block">Yeni Makale Ekle</button></div>
+        @Html.Action("MakaleEkle")
+
+    }
+
+    @if (Model == null || Model.Count()==0)
+    {
+        <div class="alert alert-warning">Bu bölüm geliştirilme aşamasındadır.</div>
+    }
+    else
+    {
+        foreach (Makale item in Model)
+        {
+            <div class="well">
+                <div class="media">
+                    @*<a class="pull-left" href="#">
+                            <img class="media-object" src="http://placekitten.com/150/150">
+                        </a>*@
+                    <div class="media-body">
+                        <h4 class="media-heading">
+                            @Html.ActionLink(item.Baslik, "Detay", new { id = item.MakaleID })
+                            @if (User.IsInRole("Admin") || User.IsInRole("MakaleModerator"))
+                            {
+                                <span rel="@item.MakaleID" class="makalesil btn btn-danger pull-right">Sil</span>
+                                <a href="/Makale/Duzenle/@item.MakaleID" class="btn btn-default pull-right">Düzenle</a>
+                            }
+                        </h4>
+                        <p>@item.KisaAciklama</p>
+                        <ul class="list-inline list-unstyled">
+                            <li><span><i class="glyphicon glyphicon-calendar"></i> @item.EklenmeTarihi.ToLongDateString() </span></li>
+                            <li>|</li>
+                            <li>
+                                <span>
+                                    Konu:
+                                    @if (item.Konular != null && item.Konular.Count != 0)
+                                    {
+                                        foreach (Konu konu in item.Konular)
+                                        {
+                                            <i>@konu.KonuBaslik</i> <text>,</text>
+                                        }
+                                    }
+                                </span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        }
+    }
+</div>

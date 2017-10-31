@@ -21,7 +21,7 @@ namespace Entity
         public string WebSitesi { get; set; }
         [DataType(DataType.Date)]
         [DisplayName("Doğum Tarihi")]
-        public DateTime DogumTarihi { get; set; }
+        public DateTime? DogumTarihi { get; set; }
         public string Resim { get; set; }
      
     }

@@ -5,9 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title - My ASP.NET Application</title>
     @Styles.Render("~/Content/css")
-    @Styles.Render("~/Content/LightboxCSS")
-    @Styles.Render("~/Content/SelectizeCSS")
     @Scripts.Render("~/bundles/modernizr")
+    @RenderSection("CSS", false)
     <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.1.0/css/font-awesome.min.css" />
 </head>
 <body>
@@ -22,70 +21,64 @@
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                         </button>
-                        <a class="navbar-brand" href="#">Logo</a>
+                        <a class="navbar-brand" href="/"><img src="~/Content/images/logo.png" title="Egitim5" class="logo" /></a>
                     </div>
                     <div id="navbar" class="navbar-collapse collapse">
                         <ul class="nav navbar-nav">
-                            <li class="active"><a href="#" class="">Home</a></li>
-                            <li class="dropdown">
-                                <a href="#" class="dropdown-toggle " data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Departments <span class="caret"></span></a>
-                                <ul class="dropdown-menu">
+                            <li @Html.Raw(Request.RequestContext.RouteData.Values["Controller"].ToString() == "Home" ? "class='active'" : "")>
+                                @Html.ActionLink("Anasayfa", "Index", "Home")
+                            </li>
+                            <li @Html.Raw(Request.RequestContext.RouteData.Values["Controller"].ToString() == "Makale" ? "class='active'" : "")>
+                                @Html.ActionLink("Makaleler", "Index", "Makale")
+                            </li>
+                            <li @Html.Raw(Request.RequestContext.RouteData.Values["Controller"].ToString() == "EKitap" ? "class='active'" : "")>
+                                @Html.ActionLink("E-Kitaplar", "Index", "EKitap")
+                            </li>
+                            @if (User.IsInRole("Admin"))
+                            {
+                                <li>@Html.ActionLink("Konu Yönetimi", "Index", "Konu")</li>
+                            }
+                        </ul>@using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm", @class = "navbar-right" }))
+                        {
+                            <ul class="nav navbar-nav pull-right">
+                                @if (User.Identity.IsAuthenticated)
+                                {
                                     <li class="dropdown">
-                                        <a href="#" class="dropdown-toggle " data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">View Departments</a>
+                                        <a href="#" class="dropdown-toggle active" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">@User.Identity.Name  @*<span class="caret"></span>*@</a>
+                                        @*<ul class="dropdown-menu">
+                                                <li><a href="#">Şifremi Değiştir</a></li>
+                                                <li><a href="#">Profilim</a></li>
+                                            </ul>*@
                                     </li>
-                                    <li><a href="#">Add New</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="#">Add New</a></li>
-                            <li class="dropdown">
-                                <a href="#" class="dropdown-toggle " data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Managers <span class="caret"></span></a>
-                                <ul class="dropdown-menu">
-                                    <li><a href="#">View Managers</a></li>
-                                    <li><a href="#">Add New</a></li>
-                                </ul>
-                            </li>
-                            <li class="dropdown">
-                                <a href="#" class="dropdown-toggle active" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Staff <span class="caret"></span></a>
-                                <ul class="dropdown-menu">
-                                    <li><a href="#">View Staff</a></li>
-                                    <li><a href="#">Add New</a></li>
-                                    <li><a href="#">Bulk Upload</a></li>
-                                </ul>
-                            </li>
-                            <li class="down">
-                                <a href="#" class="dropdown-toggle active" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">HR <span class="caret"></span></a>
-                                <ul class="dropdown-menu">
-                                    <li><a href="#">Change Time Entry</a></li>
-                                    <li><a href="#">Report</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                        <ul class="nav navbar-nav pull-right">
-                            <li class="dropdown">
-                                <a href="#" class="dropdown-toggle active" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Signed in as  <span class="caret"></span></a>
-                                <ul class="dropdown-menu">
-                                    <li><a href="#">Change Password</a></li>
-                                    <li><a href="#">My Profile</a></li>
-                                </ul>
-                            </li>
-                            <li class=""><a href="#">Logout</a></li>
-                        </ul>
+                                    <li class="">
+
+                                        @Html.AntiForgeryToken()
+                                        <a href="javascript:document.getElementById('logoutForm').submit()">Çıkış Yap</a>
+
+                                    </li>
+                                }
+                                else
+                                {
+                                    <li @Html.Raw(Request.RequestContext.RouteData.Values["Action"].ToString() == "Register" ? "class='active'" : "")>
+                                        <a href="/Account/Register/">Kayıt Ol</a>
+                                    </li>
+                                    <li @Html.Raw(Request.RequestContext.RouteData.Values["Action"].ToString() == "Login" ? "class='active'" : "")>
+                                        <a href="/Account/Login/">Giriş Yap</a>
+                                    </li>
+                                }
+                            </ul>
+                        }
                     </div>
                 </div>
             </nav>
         </div>
-    </div>  
-
-
+    </div>
 
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
-    @Scripts.Render("~/Content/LightboxJS")
-    @Scripts.Render("~/Content/SelectizeJS")
+    @RenderSection("Scripts", required: false)
     @Scripts.Render("~/MainScript")
-    @RenderSection("scripts", required: false)
-    
     <div class="container" id="wrapper">@RenderBody()</div>
-    
+
 </body>
 </html>

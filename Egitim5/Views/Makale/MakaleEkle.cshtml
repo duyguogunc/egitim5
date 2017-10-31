@@ -1,0 +1,103 @@
+﻿@using Entity
+@model Makale
+@{ Layout = null;}
+
+@if (ViewBag.EklendiMi != null)
+{
+    <div class="alert alert-success">Makale eklendi. <a href="?">Sayfayı yenilemek için tıklayın</a></div>
+}
+
+<!-- line modal -->
+<div class="modal fade icerikForm" id="ekleForm" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Kapat</span></button>
+                <h3 class="modal-title" id="lineModalLabel">Yeni Makale Ekle</h3>
+            </div>
+            <div class="modal-body">
+                @using (Html.BeginForm())
+                {
+                    @Html.AntiForgeryToken()
+                    if (!ViewData.ModelState.IsValid)
+                    {
+                        <div class="alert alert-danger">
+                            @Html.ValidationSummary()
+                        </div>
+                    }
+                    <div class="container">
+                        <div class="stepwizard">
+                            <div class="stepwizard-row setup-panel">
+                                <div class="stepwizard-step">
+                                    <a href="#step-1" type="button" class="btn btn-primary btn-circle">1</a>
+                                    <p>Genel Ayarlar</p>
+                                </div>
+                                <div class="stepwizard-step">
+                                    <a href="#step-2" type="button" class="btn btn-default btn-circle" disabled="disabled">2</a>
+                                    <p>İçerik</p>
+                                </div>
+                                <div class="stepwizard-step">
+                                    <a href="#step-3" type="button" class="btn btn-default btn-circle" disabled="disabled">3</a>
+                                    <p>SEO</p>
+                                </div>
+                            </div>
+                        </div>
+                        <form role="form">
+                            <div class="row setup-content" id="step-1">
+                                <div class="col-xs-12">
+                                    <div class="col-md-12">
+                                        <h3> Adım 1 : Genel Ayarlar</h3>
+                                        <div class="form-group">
+                                            @Html.LabelFor(x => x.Baslik)
+                                            @Html.TextBoxFor(x => x.Baslik, htmlAttributes: new { @class = "form-control", @placeholder = "Başlık" })
+                                        </div>
+                                        <div class="form-group">
+                                            @Html.LabelFor(x => x.KisaAciklama)
+                                            @Html.TextBoxFor(x => x.KisaAciklama, htmlAttributes: new { @class = "form-control", @placeholder = "Kısa Açıklama" })
+                                        </div>
+                                        <div class="form-group">
+                                            @Html.Action("KonuSelect","Shared")
+                                        </div>
+                                        <button class="btn btn-primary nextBtn btn-lg pull-right" type="button">İleri</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row setup-content" id="step-2">
+                                <div class="col-xs-12">
+                                    <div class="col-md-12">
+                                        <h3> Adım 2 : İçerik</h3>
+                                        <div class="form-group">
+                                            @Html.LabelFor(x => x.MakaleIcerik)
+                                            @Html.TextAreaFor(x => x.MakaleIcerik, htmlAttributes: new { @class = "form-control", @placeholder = "İçerik" })
+                                        </div>
+                                        <button class="btn btn-primary nextBtn btn-lg pull-right" type="button">Next</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row setup-content" id="step-3">
+                                <div class="col-xs-12">
+                                    <div class="col-md-12">
+                                        <h3> Adım 3 : SEO</h3>
+                                        <div class="form-group">
+                                            @Html.LabelFor(x => x.Title)
+                                            @Html.TextBoxFor(x => x.Title, htmlAttributes: new { @class = "form-control", @placeholder = "Title" })
+                                        </div>
+                                        <div class="form-group">
+                                            @Html.LabelFor(x => x.Description)
+                                            @Html.TextBoxFor(x => x.Description, htmlAttributes: new { @class = "form-control", @placeholder = "Description" })
+                                        </div>
+                                        <div class="form-group">
+                                            @Html.LabelFor(x => x.Keywords)
+                                            @Html.TextBoxFor(x => x.Keywords, htmlAttributes: new { @class = "form-control", @placeholder = "Keywords" })
+                                        </div>
+                                        <button class="btn btn-success btn-lg pull-right" type="submit">Kaydet!</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</div>

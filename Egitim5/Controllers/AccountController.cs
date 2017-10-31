@@ -11,8 +11,6 @@ using Microsoft.Owin.Security;
 using Egitim5.Models;
 using Entity;
 using Microsoft.AspNet.Identity.EntityFramework;
-using System.Data.Entity;
-using DAL;
 
 namespace Egitim5.Controllers
 {

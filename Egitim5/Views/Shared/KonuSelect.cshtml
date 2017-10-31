@@ -1,0 +1,9 @@
+﻿@using Entity.ViewModels
+@model List<KonuViewModel>
+@{ Layout = null;}
+<select class="konuSec" name="SecilenKonular" multiple="multiple">
+    @foreach (var item in Model)
+    {
+        <option value="@item.KonuID" @Html.Raw(item.SeciliMi?" selected ":"")>@item.KonuBaslik</option>
+    }
+</select>

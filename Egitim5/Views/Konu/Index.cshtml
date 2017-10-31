@@ -1,0 +1,50 @@
+﻿@using Entity.Models
+@model List<Konu>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@section CSS{
+    @Styles.Render("~/Content/LightboxCSS")
+    @Styles.Render("~/Content/MultiSelectCSS")
+}
+@section Scripts{
+    @Scripts.Render("~/Content/MultiSelectJS")
+    @Scripts.Render("~/Content/LightboxJS")
+}
+<h2>Konular</h2>
+
+@if (User.IsInRole("Admin") || User.IsInRole("MakaleModerator"))
+{
+    <div class="adminbuttons"><button data-toggle="modal" data-target="#squarespaceModal" class="btn btn-primary center-block">Yeni Konu Ekle</button></div>
+    @Html.Action("KonuEkle")
+}
+@if (Model == null || Model.Count() == 0)
+{
+    <div class="alert alert-warning">Bu bölüm geliştirilme aşamasındadır.</div>
+}
+else
+{
+    <ul class="adminhover">
+        @foreach (var item in Model)
+        {
+            <li class="col-md-4 konulist hoverbg">
+                <span rel="@item.KonuID" class="konusil btn btn-danger pull-right adminbtn"><i class="glyphicon glyphicon-trash"></i></span>
+                <span rel="@item.KonuID"  class="konuduzenle btn btn-default pull-right adminbtn"><i class="glyphicon glyphicon-edit"></i></span>
+                <h3>@item.KonuBaslik</h3><p>@item.KonuIcerik</p>
+                <ul>
+                    @if (item.AltKonular != null && item.AltKonular.Count != 0)
+                    {
+                        foreach (var alt in item.AltKonular)
+                        {
+                        <li><h4>@alt.KonuBaslik
+                                <span rel="@alt.KonuID" class="konusil btn btn-danger pull-right adminbtn"><i class="glyphicon glyphicon-trash"></i></span>
+                                <span rel="@alt.KonuID" class="konuduzenle btn btn-default pull-right adminbtn"><i class="glyphicon glyphicon-edit"></i></span>
+                            </h4><p>@alt.KonuIcerik</p></li>
+                        }
+                    }
+                </ul>
+            </li>
+        }
+    </ul>
+}

@@ -34,8 +34,8 @@ namespace Egitim5
 
             bundles.Add(new ScriptBundle("~/Content/LightboxJS").Include("~/Content/Lightbox/lightbox2-master/dist/js/lightbox.js"));
 
-            bundles.Add(new ScriptBundle("~/Content/SelectizeJS").Include("~/Content/selectize/js/selectize.js"));
-            bundles.Add(new StyleBundle("~/Content/SelectizeCSS").Include("~/Content/selectize/css/selectize.css"));
+            bundles.Add(new ScriptBundle("~/Content/MultiSelectJS").Include("~/Content/MultiSelect/js/bootstrap-multiselect.js"));
+            bundles.Add(new StyleBundle("~/Content/MultiSelectCSS").Include("~/Content/MultiSelect/css/bootstrap-multiselect.css"));
 
         }
     }

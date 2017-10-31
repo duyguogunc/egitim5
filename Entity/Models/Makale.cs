@@ -10,22 +10,15 @@ using System.Threading.Tasks;
 
 namespace Entity
 {
-    public class Makale
+    public class Makale : Icerik
     {
         [Key]
         public int MakaleID { get; set; }
-        [Required]
-        [DisplayName("Makale Adı")]
-        public string makaleBaslik { get; set; }
-        [DisplayName("Makale Türü")]
-        public string makaleTur { get; set; }
+
         [DisplayName("Makale İçeriği")]
-        public string makaleİcerik { get; set; }
+        public string MakaleIcerik { get; set; }
         [DisplayName("Makale Eklenme Tarihi")]
         public DateTime EklenmeTarihi { get; set; }
-        
-        public List<Konu> MakaleninKonusu { get; set; }
-
         public Makale()
         {
             EklenmeTarihi = DateTime.Now;

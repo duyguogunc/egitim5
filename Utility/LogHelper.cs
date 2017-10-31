@@ -11,36 +11,18 @@ namespace Utility
 {
     public static class LogHelper
     {
-        public static void Log(Exception ex, HataTuru h)
+        public static void Log(Exception ex, string preferredPath=null)
         {
-            string logPath = "c:/Users/Wissen/Desktop/logs";
 
-
-            /*
-            string logPath = ConfigurationManager.AppSettings["LogPath"];
+            string logPath = HttpContext.Current.Server.MapPath("/");
+            if (preferredPath == null)
+                logPath += ConfigurationManager.AppSettings["LogFolder"] + "\\";
+            else
+                logPath = preferredPath;
             if (!Directory.Exists(logPath))
                 Directory.CreateDirectory(logPath);
 
-    */
-            //string klasor = HttpContext.Current.Server.MapPath(logPath);
-
-            string dosyaAdi = "";
-            switch (h)
-            {
-                case HataTuru.Seed:
-                    dosyaAdi = ConfigurationManager.AppSettings["SeedLogFile"];
-                    break;
-                case HataTuru.Video:
-                    break;
-                case HataTuru.Makale:
-                    break;
-                case HataTuru.Ekitap:
-                    dosyaAdi = ConfigurationManager.AppSettings["EKitapLogFile"];
-                    break;
-                default:
-                    break;
-            }
-
+            logPath += "log.txt";
             try
             {
                 StringBuilder sb = new StringBuilder();
@@ -58,18 +40,10 @@ namespace Utility
                 sb.Append(Environment.NewLine);
                 sb.Append("----------------------------------------");
                 sb.Append(Environment.NewLine);
-                System.IO.File.AppendAllText(logPath + "/" + dosyaAdi, sb.ToString());
+                System.IO.File.AppendAllText(logPath, sb.ToString());
             }
             finally { }
         }
 
-    }
-
-    public enum HataTuru
-    {
-        Seed,
-        Video,
-        Makale,
-        Ekitap
     }
 }

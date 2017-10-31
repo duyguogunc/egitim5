@@ -13,12 +13,12 @@ namespace DAL.Migrations
         public Configuration()
         {
             AutomaticMigrationsEnabled = false;
+            AutomaticMigrationDataLossAllowed = true;
         }
 
         protected override void Seed(DAL.MyContext context)
         {
-            //veritabanýnda kullanýcý yoksa
-
+            //veritabanÄ±nda roller yoksa ilk kurulumu yap
             #region rolleriOlustur
             if (context.Roles.Count() == 0)
             {
@@ -36,30 +36,26 @@ namespace DAL.Migrations
                 UserStore<Kullanici> str = new UserStore<Kullanici>(new MyContext());
                 UserManager<Kullanici> mng = new UserManager<Kullanici>(str);
 
-                var admin = new Kullanici() { Email = "admin@yaz5.com", UserName = "admin@yaz5.com", AdSoyad="Yonetici",Meslek="Yonetici" };
-                   var videomoderator = new Kullanici() { Email = "videomoderator@yaz5.com", UserName = "videomoderator@yaz5.com" };
-                   var makalemoderator = new Kullanici() { Email = "makalemoderator@yaz5.com", UserName = "makalemoderator@yaz5.com" };
-                   var ekitapmoderator = new Kullanici() { Email = "ekitapmoderator@yaz5.com", UserName = "ekitapmoderator@yaz5.com" };
-                   
-                try
-                {
-                    mng.Create(admin, "Deneme123**"); //2. parametre þifresi
-                } catch (Exception ex) {
-                    LogHelper.Log(ex,HataTuru.Seed);
-                }
-               mng.Create(videomoderator, "Aa123456!");
+                var admin = new Kullanici() { Email = "admin@yaz5.com", UserName = "admin@yaz5.com", AdSoyad = "Yonetici", Meslek = "Yonetici" };
+                var videomoderator = new Kullanici() { Email = "videomoderator@yaz5.com", AdSoyad = "Video Moderator", UserName = "videomoderator@yaz5.com" };
+                var makalemoderator = new Kullanici() { AdSoyad = "Makale Moderator", Email = "makalemoderator@yaz5.com", UserName = "makalemoderator@yaz5.com" };
+                var ekitapmoderator = new Kullanici() { AdSoyad = "Kitap Moderator", Email = "ekitapmoderator@yaz5.com", UserName = "ekitapmoderator@yaz5.com" };
+
+
+                mng.Create(admin, "Aa123456!"); //2. parametre Ã¾ifresi
+                mng.Create(videomoderator, "Aa123456!");
                 mng.Create(makalemoderator, "Aa123456!");
                 mng.Create(ekitapmoderator, "Aa123456!");
-              
+
                 #endregion
-               
+
                 #region kullanicilariRollereEkle
                 mng.AddToRole(admin.Id, "Admin");
                 mng.AddToRole(videomoderator.Id, "VideoModerator");
                 mng.AddToRole(makalemoderator.Id, "MakaleModerator");
                 mng.AddToRole(ekitapmoderator.Id, "EKitapModerator");
                 #endregion
-    
+
             }
 
         }

@@ -181,6 +181,8 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\MakaleController.cs" />
+    <Compile Include="Controllers\SharedController.cs" />
     <Compile Include="Controllers\EKitapController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\KonuController.cs" />
@@ -198,6 +200,7 @@
     <Content Include="Content\css\bootstrap.css" />
     <Content Include="Content\css\bootstrap.min.css" />
     <Content Include="Content\css\Style.css" />
+    <Content Include="Content\images\logo.png" />
     <Content Include="Content\Lightbox\lightbox2-master\.gitignore" />
     <Content Include="Content\Lightbox\lightbox2-master\dist\css\lightbox.css" />
     <Content Include="Content\Lightbox\lightbox2-master\dist\css\lightbox.min.css" />
@@ -217,17 +220,12 @@
     <Content Include="Content\Lightbox\lightbox2-master\src\images\next.png" />
     <Content Include="Content\Lightbox\lightbox2-master\src\images\prev.png" />
     <Content Include="Content\Lightbox\lightbox2-master\src\js\lightbox.js" />
-    <Content Include="Content\selectize\css\selectize.bootstrap2.css" />
-    <Content Include="Content\selectize\css\selectize.bootstrap3.css" />
-    <Content Include="Content\selectize\css\selectize.css" />
-    <Content Include="Content\selectize\css\selectize.default.css" />
-    <Content Include="Content\selectize\css\selectize.legacy.css" />
-    <Content Include="Content\selectize\js\selectize.js" />
-    <Content Include="Content\selectize\js\selectize.min.js" />
-    <Content Include="Content\selectize\js\standalone\selectize.js" />
-    <Content Include="Content\selectize\js\standalone\selectize.min.js" />
+    <Content Include="Content\MultiSelect\css\bootstrap-multiselect.min.css" />
+    <Content Include="Content\MultiSelect\css\bootstrap-multiselect.css" />
+    <Content Include="Content\MultiSelect\js\bootstrap-multiselect.min.js" />
+    <Content Include="Content\MultiSelect\js\bootstrap-multiselect.js" />
     <Content Include="favicon.ico" />
-    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -243,15 +241,7 @@
     <Content Include="Content\Lightbox\lightbox2-master\package.json" />
     <Content Include="Content\Lightbox\lightbox2-master\README.md" />
     <Content Include="Content\Lightbox\lightbox2-master\ROADMAP.md" />
-    <Content Include="Content\selectize\less\plugins\drag_drop.less" />
-    <Content Include="Content\selectize\less\plugins\dropdown_header.less" />
-    <Content Include="Content\selectize\less\plugins\optgroup_columns.less" />
-    <Content Include="Content\selectize\less\plugins\remove_button.less" />
-    <Content Include="Content\selectize\less\selectize.bootstrap2.less" />
-    <Content Include="Content\selectize\less\selectize.bootstrap3.less" />
-    <Content Include="Content\selectize\less\selectize.default.less" />
-    <Content Include="Content\selectize\less\selectize.legacy.less" />
-    <Content Include="Content\selectize\less\selectize.less" />
+    <None Include="Properties\PublishProfiles\egitim5.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -265,7 +255,9 @@
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
     <Content Include="Scripts\_references.js" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
@@ -276,8 +268,6 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Home\About.cshtml" />
-    <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Account\_ExternalLoginsListPartial.cshtml" />
     <Content Include="Views\Account\ConfirmEmail.cshtml" />
@@ -303,15 +293,27 @@
     <Content Include="Views\EKitap\KitapEkle.cshtml" />
     <Content Include="Views\EKitap\Detay.cshtml" />
     <Content Include="Views\EKitap\IlgiliKitaplar.cshtml" />
+    <Content Include="Views\Makale\Detay.cshtml" />
+    <Content Include="Views\Makale\IlgiliMakaleler.cshtml" />
+    <Content Include="Views\Makale\Index.cshtml" />
+    <Content Include="Views\Makale\MakaleEkle.cshtml" />
+    <Content Include="Views\Shared\KonuSelect.cshtml" />
+    <Content Include="Views\Konu\Index.cshtml" />
+    <Content Include="Views\Konu\KonuEkle.cshtml" />
+    <Content Include="Views\EKitap\Duzenle.cshtml" />
+    <Content Include="Views\Makale\Duzenle.cshtml" />
+    <Content Include="Views\Home\SonMakaleler.cshtml" />
+    <Content Include="Views\Home\SonKitaplar.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Content\EkitapUpload\" />
+    <Folder Include="logs\" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="fonts\glyphicons-halflings-regular.woff" />
-    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
-    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.eot" />
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
@@ -320,10 +322,6 @@
     <ProjectReference Include="..\Business\Business.csproj">
       <Project>{82917378-C720-407D-B715-6EF07051AFC0}</Project>
       <Name>Business</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\DAL\DAL.csproj">
-      <Project>{1eb955ef-47ff-4742-adbc-a74721b38719}</Project>
-      <Name>DAL</Name>
     </ProjectReference>
     <ProjectReference Include="..\Entity\Entity.csproj">
       <Project>{C8BDA162-2E73-460E-87DA-9445CE657B93}</Project>

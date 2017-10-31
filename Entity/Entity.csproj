@@ -58,14 +58,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Models\EKitap.cs" />
+    <Compile Include="Models\Icerik.cs" />
     <Compile Include="Models\Konu.cs" />
     <Compile Include="Models\Kullanici.cs" />
     <Compile Include="Models\Makale.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Models\Video.cs" />
+    <Compile Include="ViewModels\KonuViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

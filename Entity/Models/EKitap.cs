@@ -9,18 +9,14 @@ using System.Threading.Tasks;
 
 namespace Entity
 {
-    public class EKitap
+    public class EKitap : Icerik
     {
         [Key]
         public int EKitapID { get; set; }
         [Required]
-        [MaxLength(20, ErrorMessage =("En fazla 20 karakter yazılabilir."))]
-        public string EKitapBaslik { get; set; }
-        [Required]
         public string EKitapIcerik { get; set; }
         public DateTime EklenmeTarihi { get; set; }
         public string EKitapURL { get; set; }
-        public List<Konu> EKitapinKonusu { get; set; }
         public EKitap()
         {
             EklenmeTarihi = DateTime.Now;

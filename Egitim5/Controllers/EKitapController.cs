@@ -22,6 +22,7 @@ namespace Egitim5.Controllers
         }
 
         [HttpGet]
+        [Authorize(Roles = "Admin, EKitapModerator")]
         public ActionResult KitapEkle()
         {
             return View();
@@ -30,93 +31,83 @@ namespace Egitim5.Controllers
         [HttpPost]
         [Authorize(Roles = "Admin, EKitapModerator")]
         [ValidateAntiForgeryToken]
-        public ActionResult KitapEkle(EKitap k, HttpPostedFileBase EKitapURL, string konular)
+        public ActionResult KitapEkle(EKitap k, HttpPostedFileBase EKitapURL, List<int> SecilenKonular)
         {
             var klasor = "/Content/EkitapUpload/";
-            var kitapAdi = EKitapURL.FileName;
-            var kaydedilecekIsim = kitapAdi;
+            string kaydedilecekIsim = "";
 
             try
             {
                 #region dosyayiKaydet
-                if (System.IO.File.Exists(klasor + kitapAdi))
+                if (EKitapURL != null && EKitapURL.ContentLength > 0)
                 {
-                    //dosya.pdf  
-                    //dosya-1.pdf
-                    //dosya-2.pdf
+                    var kitapAdi = EKitapURL.FileName;
+                    kaydedilecekIsim = kitapAdi;
+                    if (System.IO.File.Exists(klasor + kitapAdi))
+                    {
+                        System.IO.FileInfo bilgi = new System.IO.FileInfo(klasor + kitapAdi);
 
-                    System.IO.FileInfo bilgi = new System.IO.FileInfo(klasor + kitapAdi);
+                        var sadeceDosyaAdi = bilgi.Name.Replace(bilgi.Extension, "");
 
-                    var sadeceDosyaAdi = bilgi.Name.Replace(bilgi.Extension, "");
+                        string[] bulunanlar = System.IO.Directory.GetFiles(klasor, sadeceDosyaAdi + ".*", System.IO.SearchOption.AllDirectories);
 
-                    string[] bulunanlar = System.IO.Directory.GetFiles(klasor, sadeceDosyaAdi + ".*", System.IO.SearchOption.AllDirectories);
+                        var kacTane = bulunanlar.Length;
 
-                    var kacTane = bulunanlar.Length;
+                        kaydedilecekIsim = sadeceDosyaAdi + "-" + kacTane + "." + bilgi.Extension;
+                    }
 
-                    kaydedilecekIsim = sadeceDosyaAdi + "-" + kacTane + "." + bilgi.Extension;
+                    var path = Server.MapPath(klasor);
+                    EKitapURL.SaveAs(path + kaydedilecekIsim);
                 }
-
-                var path = Server.MapPath(klasor);
-                EKitapURL.SaveAs(path + kaydedilecekIsim);
                 #endregion
-
             }
             catch (Exception ex)
             {
-                ModelState.AddModelError("DosyaKayit", ex);
+                ModelState.AddModelError(string.Empty, ex.Message);
             }
-            
-            k.EKitapURL = kaydedilecekIsim;
-             
-            #region KonulariEkle
-            string[] konuListe = konular.Split(',');
-            KonuRep kRep = new KonuRep();
-            foreach (string item in konuListe)
-            {
-                try
-                {
-                    var gercekKonu = kRep.GetAll().Where(x => x.KonuBaslik == item).FirstOrDefault();
-                    k.EKitapinKonusu.Add(gercekKonu);
-                }
-                catch (Exception ex){
-                    LogHelper.Log(ex, HataTuru.Ekitap);
-                }
-            }
-            #endregion
 
+            k.EKitapURL = kaydedilecekIsim;
+            /*
+            if (SecilenKonular == null || SecilenKonular.Count == 0)
+                ModelState.AddModelError(string.Empty, "Bir konu seciniz.");
+            else
+                using (KonuRep kr = new KonuRep())
+                    k.Konular = kr.GetAll().Where(x => SecilenKonular.Any(a => a == x.KonuID)).ToList();
+*/
             if (ModelState.IsValid)
             {
                 new EkitapRep().Insert(k);
+                ViewBag.EklendiMi = true;
             }
-            return RedirectToAction("Index");
+            return View();
         }
 
-        [Authorize(Roles ="Admin, EKitapModerator")] 
+        [Authorize(Roles = "Admin, EKitapModerator")]
         [HttpPost]
         public JsonResult KitapSil(int id)
         {
             try
             {
                 new EkitapRep().Delete(id);
-                return Json(new { success = true, message = "Silindi"});
+                return Json(new { success = true, message = "Silindi" });
             }
-            catch {
+            catch (Exception ex)
+            {
+                LogHelper.Log(ex);
                 return Json(new { success = false, message = "Bir hata oluştu." });
             }
         }
-
-
         public ActionResult Detay(int id)
         {
-           EKitap k = new EkitapRep().GetById(id);
+            EKitap k = new EkitapRep().GetById(id);
             return View(k);
         }
 
         public ActionResult IlgiliKitaplar(int id)
         {
-            
+
             EKitap simdiki = new EkitapRep().GetById(id);
-            List<Konu> konular = simdiki.EKitapinKonusu;
+            List<Konu> konular = simdiki.Konular;
             if (konular != null)
             {
                 List<EKitap> liste = new EkitapRep().GetAll().Where(x => konular.Any(a => konular.Contains(a))).ToList();
@@ -124,7 +115,90 @@ namespace Egitim5.Controllers
             }
             else return View();
         }
+
+        [HttpGet]
+        [Authorize(Roles = "Admin, EKitapModerator")]
+        public ActionResult Duzenle(int id)
+        {
+            EkitapRep rep = new EkitapRep();
+            return View(rep.GetById(id));
+        }
+
+        [HttpPost]
+        [Authorize(Roles = "Admin, EKitapModerator")]
+        [ValidateAntiForgeryToken]
+        public ActionResult Duzenle(EKitap k, HttpPostedFileBase EKitapURL, List<int> SecilenKonular)
+        {
+            string kaydedilecekIsim = "";
+            var klasor = "/Content/EkitapUpload/";
+
+            try
+            {
+                #region dosyayiKaydet
+                if (k.EKitapURL != null)
+                {
+                    var kitapAdi = EKitapURL.FileName;
+                    kaydedilecekIsim = kitapAdi;
+                    if (System.IO.File.Exists(klasor + kitapAdi))
+                    {
+                        System.IO.FileInfo bilgi = new System.IO.FileInfo(klasor + kitapAdi);
+
+                        var sadeceDosyaAdi = bilgi.Name.Replace(bilgi.Extension, "");
+
+                        string[] bulunanlar = System.IO.Directory.GetFiles(klasor, sadeceDosyaAdi + ".*", System.IO.SearchOption.AllDirectories);
+
+                        var kacTane = bulunanlar.Length;
+
+                        kaydedilecekIsim = sadeceDosyaAdi + "-" + kacTane + "." + bilgi.Extension;
+                    }
+
+                    var path = Server.MapPath(klasor);
+                    EKitapURL.SaveAs(path + kaydedilecekIsim);
+                }
+                #endregion
+            }
+            catch (Exception ex)
+            {
+                LogHelper.Log(ex);
+                ModelState.AddModelError(string.Empty, ex.Message);
+            }
+
+            if (SecilenKonular == null || SecilenKonular.Count == 0)
+                ModelState.AddModelError(string.Empty, "Bir konu seciniz.");
+
+            if (ModelState.IsValid)
+            {
+                EkitapRep er = new EkitapRep();
+                EKitap kitap = er.GetById(k.EKitapID);
+
+                if (!string.IsNullOrEmpty(kaydedilecekIsim))
+                {
+                    try
+                    {
+                        if (System.IO.File.Exists(klasor + kitap.EKitapURL))
+                            System.IO.File.Delete(klasor + kitap.EKitapURL);
+                    }
+                    catch (Exception ex)
+                    {
+                        LogHelper.Log(ex);
+                    }
+                    kitap.EKitapURL = kaydedilecekIsim;
+                }
+
+                kitap.Baslik = k.Baslik;
+                kitap.Description = k.Description;
+                kitap.EKitapIcerik = k.EKitapIcerik;
+                kitap.Keywords = k.Keywords;
+                kitap.KisaAciklama = k.KisaAciklama;
+                KonuRep kr = new KonuRep();
+                kitap.Konular = kr.GetAll().Where(x => SecilenKonular.Any(a => a == x.KonuID)).ToList();
+                kitap.Title = k.Title;
+                er.Update(kitap);
+                return RedirectToAction("Index");
+            }
+            return View();
+        }
     }
 
-   
+
 }

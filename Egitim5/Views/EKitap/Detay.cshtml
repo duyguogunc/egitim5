@@ -5,25 +5,23 @@
     ViewBag.Title = "Detay";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-
-<h1>@Model.EKitapBaslik</h1>
-
+<h1>@Model.Baslik</h1>
+<p>@Model.KisaAciklama</p>
 <p>@Model.EKitapIcerik</p>
-<hr />
-<a href="/Content/EkitapUpload/@Model.EKitapURL">İndir</a>
-<hr />
-
+<hr/>
+<a href="~/Content/EkitapUpload/@Model.EKitapURL" target="_blank">E-Kitabı görüntülemek için tıklayın.</a>
+<hr/>
 <i>@Model.EklenmeTarihi.ToLongDateString()</i>
 <p>
-    @if (Model.EKitapinKonusu != null && Model.EKitapinKonusu.Count != 0)
+    @if (Model.Konular != null && Model.Konular.Count != 0)
     {
-        foreach (Konu konu in Model.EKitapinKonusu)
+        foreach (Konu konu in Model.Konular)
         {
             <i>@konu.KonuBaslik</i> <text>,</text>
         }
     }
 </p>
-@if (Model.EKitapinKonusu != null)
+@if (Model.Konular != null)
 {
     Html.Action("IlgiliKitaplar", new { id = Model.EKitapID });
 }

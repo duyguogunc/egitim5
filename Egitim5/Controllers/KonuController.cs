@@ -6,41 +6,61 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Mvc;
-
+using Utility;
 
 namespace Egitim5.Controllers
 {
-    
+
     public class KonuController : Controller
     {
-        [HttpGet]
-        public ActionResult Konular ()
+        public ActionResult Index()
         {
             KonuRep kr = new KonuRep();
-            return View(kr.GetAll());
-
+            var konular = kr.GetAll();
+            var ustKonular = konular.Where(x => x.UstKonuID == null).ToList();
+            ustKonular.ForEach(x => x.AltKonular = konular.Where(a => a.UstKonuID == x.KonuID).ToList());
+            return View(ustKonular);
         }
-
-       [Authorize(Roles = "Admin")]             
+        [HttpPost]
+        [Authorize(Roles = "Admin")]
         public ActionResult KonuEkle(Konu konu)
         {
             KonuRep kr = new KonuRep();
-            kr.Insert(konu);
+            if (ModelState.IsValid)
+            {
+                if (konu.UstKonuID == 0) konu.UstKonuID = null;
+                kr.Insert(konu);
+                ViewBag.EklendiMi = true;
+            }
             return View();
         }
+        public ActionResult KonuEkle()
+        {
+            KonuRep kr = new KonuRep();
+            List<Konu> liste = kr.GetAll();
+            liste.Insert(0, new Konu { KonuID = 0, KonuBaslik = "Seçiniz" });
+            ViewBag.Konular = liste;
+            return View();
+        }
+
         [Authorize(Roles = "Admin")]
-        public ActionResult KonuSil(int? id)
+        public JsonResult KonuSil(int? id)
         {
             if (id != null)
             {
-                KonuRep kr = new KonuRep();
-                kr.Delete((int)id);
+                try
+                {
+                    new KonuRep().Delete((int)id);
+                    return Json(new { success = true, message = "Silindi" });
+                }
+                catch (Exception ex)
+                {
+                    LogHelper.Log(ex);
+                    return Json(new { success = false, message = "Bir hata oluştu." });
+                }
             }
             else
-            {
-                Response.Redirect("" + id);
-            }
-            return View();
+                return Json(new { success = false, message = "Silinecek konuyu seciniz." });
         }
 
 

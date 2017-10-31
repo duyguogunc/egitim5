@@ -1,0 +1,53 @@
+﻿@using Entity.Models
+@model Konu
+@{ Layout = null;}
+
+@if (ViewBag.EklendiMi != null)
+{
+    <div class="alert alert-success">Konu eklendi. <a href="?">Sayfayı yenilemek için tıklayın</a></div>
+}
+
+<div class="modal fade" id="squarespaceModal" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Kapat</span></button>
+                <h3 class="modal-title" id="lineModalLabel">Yeni Konu Ekle</h3>
+            </div>
+            <div class="modal-body">
+                <div class="container">
+                    @using (Html.BeginForm())
+                    {
+                        @Html.AntiForgeryToken()
+                        if (!ViewData.ModelState.IsValid)
+                        {
+                            <div class="alert alert-danger">
+                                @Html.ValidationSummary()
+                            </div>
+                        }
+                        <div class="col-xs-12">
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    @Html.LabelFor(x => x.KonuBaslik)
+                                    @Html.TextBoxFor(x => x.KonuBaslik, htmlAttributes: new { @class = "form-control", @placeholder = "Başlık", @required="required" })
+                                </div>
+                                <div class="form-group">
+                                    @Html.LabelFor(x => x.KonuIcerik)
+                                    @Html.TextBoxFor(x => x.KonuIcerik, htmlAttributes: new { @class = "form-control", @placeholder = "İçerik", @required = "required" })
+                                </div>
+                                @if (ViewBag.Konular != null && ViewBag.Konular.Count != 0)
+                                {
+                                <div class="form-group">
+                                    @Html.LabelFor(x => x.UstKonu)
+                                    @Html.DropDownList("UstKonuID", new SelectList(ViewBag.Konular, "KonuID", "KonuBaslik"))
+                                </div>
+                                }
+                                <button class="btn btn-success btn-lg pull-right" type="submit">Kaydet!</button>
+                            </div>
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

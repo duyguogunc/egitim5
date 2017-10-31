@@ -1,0 +1,71 @@
+﻿@using Entity
+@using Entity.Models
+@model Makale
+
+@{
+    ViewBag.Title = "Duzenle";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@section CSS{
+    @Styles.Render("~/Content/MultiSelectCSS")
+}
+@section Scripts{
+    @Scripts.Render("~/Content/MultiSelectJS")
+}
+@using (Html.BeginForm("Duzenle", "Makale", FormMethod.Post, new { @enctype = "multipart/form-data" }))
+{
+    @Html.AntiForgeryToken()
+    if (!ViewData.ModelState.IsValid)
+    {
+        <div class="alert alert-danger">
+            @Html.ValidationSummary()
+        </div>
+    }
+    <div class="col-xs-12">
+        <div class="col-md-12">
+            <h3> Adım 1 : Genel Ayarlar</h3>
+            <div class="form-group">
+                @Html.HiddenFor(x => x.MakaleID)
+                @Html.LabelFor(x => x.Baslik)
+                @Html.TextBoxFor(x => x.Baslik, htmlAttributes: new { @class = "form-control", @placeholder = "Başlık" })
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(x => x.KisaAciklama)
+                @Html.TextBoxFor(x => x.KisaAciklama, htmlAttributes: new { @class = "form-control", @placeholder = "Kısa Açıklama" })
+            </div>
+            <div class="form-group">
+                <label>Konu Secin</label><br/>
+                @Html.Action("KonuSelect", "Shared",new { @secilenler=Model.Konular.Select(x=>x.KonuID)})
+            </div>
+        </div>
+    </div>
+        <hr />
+        <div class="col-xs-12">
+            <div class="col-md-12">
+                <h3> Adım 2 : İçerik</h3>
+                <div class="form-group">
+                    @Html.LabelFor(x => x.MakaleIcerik)
+                    @Html.TextAreaFor(x => x.MakaleIcerik, htmlAttributes: new { @class = "form-control", })
+                </div>
+            </div>
+        </div>
+                        <hr />
+                        <div class="col-xs-12">
+                            <div class="col-md-12">
+                                <h3> Adım 3 : SEO</h3>
+                                <div class="form-group">
+                                    @Html.LabelFor(x => x.Title)
+                                    @Html.TextBoxFor(x => x.Title, htmlAttributes: new { @class = "form-control", @placeholder = "Title" })
+                                </div>
+                                <div class="form-group">
+                                    @Html.LabelFor(x => x.Description)
+                                    @Html.TextBoxFor(x => x.Description, htmlAttributes: new { @class = "form-control", @placeholder = "Description" })
+                                </div>
+                                <div class="form-group">
+                                    @Html.LabelFor(x => x.Keywords)
+                                    @Html.TextBoxFor(x => x.Keywords, htmlAttributes: new { @class = "form-control", @placeholder = "Keywords" })
+                                </div>
+                                <button class="btn btn-success btn-lg pull-right" type="submit">Kaydet!</button>
+                            </div>
+                        </div>
+}

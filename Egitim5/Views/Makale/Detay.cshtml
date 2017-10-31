@@ -1,0 +1,28 @@
+﻿@using Entity
+@using Entity.Models
+@model Makale
+@{
+    ViewBag.Title = "Detay";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>@Model.Baslik</h1>
+
+<p>@Model.KisaAciklama</p>
+<p>
+    @Html.Raw(Model.MakaleIcerik.Replace(Environment.NewLine,"</p><p>"))
+</p>
+<hr />
+<i>@Model.EklenmeTarihi.ToLongDateString()</i>
+<p>
+    @if (Model.Konular != null && Model.Konular.Count != 0)
+    {
+        foreach (Konu konu in Model.Konular)
+        {
+            <i>@konu.KonuBaslik</i> <text>,</text>
+        }
+    }
+</p>
+<hr/>
+@Html.Action("IlgiliMakaleler", new { id = Model.MakaleID });
+

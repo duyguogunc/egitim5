@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Business;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -13,18 +14,14 @@ namespace Egitim5.Controllers
             return View();
         }
 
-        public ActionResult About()
+        public ActionResult SonMakaleler()
         {
-            ViewBag.Message = "Your application description page.";
-
-            return View();
+            return View(new MakaleRep().GetAll().Take(2));
         }
 
-        public ActionResult Contact()
+        public ActionResult SonKitaplar()
         {
-            ViewBag.Message = "Your contact page.";
-
-            return View();
+            return View(new EkitapRep().GetAll().Take(2));
         }
     }
 }

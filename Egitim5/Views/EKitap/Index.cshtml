@@ -5,65 +5,64 @@
     ViewBag.Title = "E-Kitaplar";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-
+@section CSS{
+    @Styles.Render("~/Content/LightboxCSS")
+    @Styles.Render("~/Content/MultiSelectCSS")
+}
+@section Scripts{
+    @Scripts.Render("~/Content/MultiSelectJS")
+    @Scripts.Render("~/Content/LightboxJS")
+}
 <div class="container">
-
     @if (User.IsInRole("Admin") || User.IsInRole("EKitapModerator"))
     {
-        <div class="center"><button data-toggle="modal" data-target="#squarespaceModal" class="btn btn-primary center-block">Yeni E-Kitap Ekle</button></div>
-    }
-    @foreach (EKitap item in Model)
-    {
-        <div class="well">
-            <div class="media">
-                @*<a class="pull-left" href="#">
-                        <img class="media-object" src="http://placekitten.com/150/150">
-                    </a>*@
-                <div class="media-body">
-                    <h4 class="media-heading">
-                        @Html.ActionLink(item.EKitapBaslik, "Detay", new {  id=item.EKitapID})
-                        @if (User.IsInRole("Admin") || User.IsInRole("EKitapModerator"))
-                        {
-                            <span rel="@item.EKitapID" class="ekitapsil btn btn-default">Sil</span>
-                        }
-                    </h4>
-                    @*<p class="text-right">By Francisco</p>*@
-                    <p>@item.EKitapIcerik</p>
-                    <ul class="list-inline list-unstyled">
-                        <li><span><i class="glyphicon glyphicon-calendar"></i> @item.EklenmeTarihi.ToLongDateString() </span></li>
-                        <li>|</li>
-                        <li>
-                            <span>
-                                Konu:
-                                @if (item.EKitapinKonusu != null && item.EKitapinKonusu.Count != 0)
-                                {
-                                    foreach (Konu konu in item.EKitapinKonusu)
-                                    {
-                                        <i>@konu.KonuBaslik</i> <text>,</text>
-                                    }
-                                }
-                            </span>
-                        </li>
-                        @*<li>|</li>
-                            <li>
-                                <span class="glyphicon glyphicon-star"></span>
-                                <span class="glyphicon glyphicon-star"></span>
-                                <span class="glyphicon glyphicon-star"></span>
-                                <span class="glyphicon glyphicon-star"></span>
-                                <span class="glyphicon glyphicon-star-empty"></span>
-                            </li>
-                            <li>|</li>
-                            <li>*@
-                        <!-- Use Font Awesome http://fortawesome.github.io/Font-Awesome/ -->
-                        @*<span><i class="fa fa-facebook-square"></i></span>
-                            <span><i class="fa fa-twitter-square"></i></span>
-                            <span><i class="fa fa-google-plus-square"></i></span>*@
-                        @*</li>*@
-                    </ul>
-                </div>
-            </div>
+        <div class="adminbuttons"><button data-toggle="modal" data-target="#ekleForm" class="btn btn-primary center-block">Yeni E-Kitap Ekle</button></div>
+        @Html.Action("KitapEkle")
+
+
+        <div class="modal fade" id="duzenle" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
         </div>
     }
-</div>
 
-@Html.Action("KitapEkle")
+    @if (Model == null || Model.Count() == 0)
+            {
+        <div class="alert alert-warning">Bu bölüm geliştirilme aşamasındadır.</div>
+    }
+    else
+    {
+        foreach (EKitap item in Model)
+        {
+            <div class="well">
+                <div class="media">
+                    <div class="media-body">
+                        <h4 class="media-heading">
+                            @Html.ActionLink(item.Baslik, "Detay", new { id = item.EKitapID })
+                            @if (User.IsInRole("Admin") || User.IsInRole("EKitapModerator"))
+                            {
+                                <span rel="@item.EKitapID" class="ekitapsil btn btn-danger pull-right">Sil</span>
+                                <a href="/Ekitap/Duzenle/@item.EKitapID" class="btn btn-default pull-right">Düzenle</a>
+                            }
+                        </h4>
+                        <p>@item.EKitapIcerik</p>
+                        <ul class="list-inline list-unstyled">
+                            <li><span><i class="glyphicon glyphicon-calendar"></i> @item.EklenmeTarihi.ToLongDateString() </span></li>
+                            <li>|</li>
+                            <li>
+                                <span>
+                                    Konu:
+                                    @if (item.Konular != null && item.Konular.Count != 0)
+                                    {
+                                        foreach (Konu konu in item.Konular)
+                                        {
+                                            <i>@konu.KonuBaslik</i> <text>,</text>
+                                        }
+                                    }
+                                </span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        }
+    }
+</div>
