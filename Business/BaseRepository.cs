@@ -18,6 +18,7 @@ namespace Business
 
         public List<T> GetAll()
         {
+            if (MyContext.db == null) MyContext.db = new MyContext();
             List<T> liste = db.Set<T>().ToList();
             return liste;
         }
