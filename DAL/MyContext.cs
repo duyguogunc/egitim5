@@ -8,7 +8,7 @@ namespace DAL
 {
     public class MyContext : IdentityDbContext<Kullanici>
     {
-        public static MyContext db;
+        public static DAL.MyContext db;
         public MyContext() : base("DefaultConnection")
         {
             
