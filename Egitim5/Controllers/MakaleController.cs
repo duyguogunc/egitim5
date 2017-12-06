@@ -64,7 +64,8 @@ namespace Egitim5.Controllers
         public ActionResult Detay(int id)
         {
             Makale k = new MakaleRep().GetById(id);
-            k.GoruntulenmeSayisi++;
+            //duruma göre içerikteki kelimeler de eklenebilir.
+            Session["text"] += " " + k.Baslik;
             return View(k);
         }
 
@@ -79,6 +80,37 @@ namespace Egitim5.Controllers
                 return View(liste);
             }
             else return View();
+        }
+        
+
+        public ActionResult AlakaliMakaleler(int id)
+        {
+            IEnumerable<string> words = null;
+            string text = Session["text"].ToString().Trim();
+            var punctuation = text.Where(Char.IsPunctuation).Distinct().ToArray();
+            foreach (var item in punctuation)
+            {
+                //özel karakterlerden # charını çıkar. "C#"i "C" şeklinde göstermesin diye
+                if (item != '#')
+                {
+                    words = text.Split().Select(x => x.Trim(item));
+                }
+
+            }
+            if (words != null)
+            {
+                Dictionary<string, int> statistics = words
+                                .GroupBy(word => word)
+                                .ToDictionary(
+                                    kvp => kvp.Key, // kelimenin kendisi key
+                                    kvp => kvp.Count());
+                            string enAlakali = statistics.OrderByDescending(x => x.Value).Select(x => x.Key).FirstOrDefault();
+                            IEnumerable<Makale> makaleler = new MakaleRep().GetAll().Where(x => x.Baslik.Contains(enAlakali) && x.MakaleID != id);
+                return View(makaleler);
+            }
+            return View();
+            
+            
         }
 
         [HttpGet]
