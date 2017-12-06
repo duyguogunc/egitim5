@@ -100,6 +100,7 @@ namespace Egitim5.Controllers
         public ActionResult Detay(int id)
         {
             EKitap k = new EkitapRep().GetById(id);
+            k.EKitapGoruntulenmeSayisi++;
             return View(k);
         }
 

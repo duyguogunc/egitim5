@@ -64,6 +64,7 @@ namespace Egitim5.Controllers
         public ActionResult Detay(int id)
         {
             Makale k = new MakaleRep().GetById(id);
+            k.GoruntulenmeSayisi++;
             return View(k);
         }
 
