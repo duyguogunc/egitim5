@@ -1,0 +1,43 @@
+﻿@model Entity.Video
+@{
+    ViewBag.Title = "Detail";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Detail</h2>
+
+
+
+
+
+<div class="well">
+    <ul class="list-inline">
+        <li><button id="1" class="glyphicon glyphicon-star" aria-hidden="true"></button></li>
+        <li><button id="2" class="glyphicon glyphicon-star" aria-hidden="true"></button></li>
+        <li><button id="3" class="glyphicon glyphicon-star" aria-hidden="true"></button></li>
+        <li><button id="4" class="glyphicon glyphicon-star" aria-hidden="true"></button></li>
+        <li><button id="5" class="glyphicon glyphicon-star" aria-hidden="true"></button></li>
+    </ul>
+</div>
+
+
+
+
+<script>
+        $(".glyphicon-star").click(function () {
+
+            var id = $(this).attr("id");
+
+            console.log(id);
+            var videoID=@Model.VideoID;
+
+            $.ajax({
+                url: "/Video/VoteVideo/"+videoID,//url ile gonderdik
+                data: {"points":id},//data ile gonderdik route configde yer yoktu
+                method: "POST",
+                success: function(data){
+                    alert(data);
+                }
+            });
+        });
+</script>

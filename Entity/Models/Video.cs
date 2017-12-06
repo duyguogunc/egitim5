@@ -17,9 +17,11 @@ namespace Entity
         [Required(ErrorMessage ="Zorunlu alan!")]
         [MaxLength(100)]
         [StringLength(100,MinimumLength =10,ErrorMessage ="Aciklama 10-100 karakter arası olmalı")]
+        
         public string Aciklama { get; set; }
         public int IzlenmeSayisi { get; set; }
         public DateTime EklenmeTarihi { get; set; }
+        public int? TotalRate { get; set; }
         public Video()
         {
             IzlenmeSayisi = 0;
