@@ -1,4 +1,5 @@
 ﻿using Business;
+using Entity;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -37,15 +38,18 @@ namespace Egitim5.Controllers
             var sonuclar = rep.GetAll().Where(x => x.Baslik.ToLower().Contains(Session["aranacak"].ToString()));
             return View(sonuclar);
         }
+        [HttpGet]
+
+        
 
         public ActionResult SonMakaleler()
         {
-            return View(new MakaleRep().GetAll().Take(2));
+            return View(new MakaleRep().GetAll().Take(1));
         }
 
         public ActionResult SonKitaplar()
         {
-            return View(new EkitapRep().GetAll().Take(2));
+            return View(new EkitapRep().GetAll().Take(1));
         }
     }
 }
