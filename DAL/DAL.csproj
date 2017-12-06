@@ -57,21 +57,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Migrations\201710040633074_kurulum.cs" />
-    <Compile Include="Migrations\201710040633074_kurulum.Designer.cs">
-      <DependentUpon>201710040633074_kurulum.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201710040704414_test.cs" />
-    <Compile Include="Migrations\201710040704414_test.Designer.cs">
-      <DependentUpon>201710040704414_test.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201710040820013_kullanici.cs" />
-    <Compile Include="Migrations\201710040820013_kullanici.Designer.cs">
-      <DependentUpon>201710040820013_kullanici.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201710040958282_konu.cs" />
-    <Compile Include="Migrations\201710040958282_konu.Designer.cs">
-      <DependentUpon>201710040958282_konu.cs</DependentUpon>
+    <Compile Include="Migrations\201712041436546_kurulum.cs" />
+    <Compile Include="Migrations\201712041436546_kurulum.Designer.cs">
+      <DependentUpon>201712041436546_kurulum.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="MyContext.cs" />
@@ -96,17 +84,8 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201710040633074_kurulum.resx">
-      <DependentUpon>201710040633074_kurulum.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201710040704414_test.resx">
-      <DependentUpon>201710040704414_test.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201710040820013_kullanici.resx">
-      <DependentUpon>201710040820013_kullanici.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201710040958282_konu.resx">
-      <DependentUpon>201710040958282_konu.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201712041436546_kurulum.resx">
+      <DependentUpon>201712041436546_kurulum.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
