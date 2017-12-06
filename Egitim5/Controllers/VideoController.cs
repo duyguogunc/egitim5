@@ -14,26 +14,28 @@ namespace Egitim5.Controllers
         // GET: Video
         public ActionResult Index()
         {
-            return View();
+            BaseRepository<Video> br = new BaseRepository<Video>();
+            var liste = br.GetAll();
+            return View(liste);
         }
-        
+        [HttpGet]
         public ActionResult VideoEkle()
         {
             return View();
         }
-        public ActionResult VideoDetay(string id)
+        [HttpPost]
+        public ActionResult VideoEkle(Video yeni)
         {
-            var video = (from a in entity.Video where a.VideoID == GelenID select a).FirstOrDefault();
-            if (video != null)
-            {
-                ViewBag.Baslik = video.Baslik;
-                ViewBag.Icerik = video.Video1;
-            }
+            BaseRepository<Video> br = new BaseRepository<Video>();
+            br.Insert(yeni);
             return View();
         }
-
     }
+}  
+       
 
-    }
+  
+
+    
 
 
