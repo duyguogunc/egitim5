@@ -22,6 +22,12 @@ namespace Business
             List<T> liste = db.Set<T>().ToList();
             return liste;
         }
+        public List<T> Search(string value)
+        {
+            if (MyContext.db == null) MyContext.db = new MyContext();
+            List<T> liste = db.Set<T>().ToList();
+            return liste;
+        }
 
         public void DetachList(List<T> liste)
         {
