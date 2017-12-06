@@ -17,15 +17,56 @@ namespace Egitim5.Controllers
         // GET: Video
         public ActionResult Index()
         {
-            return View();
+            BaseRepository<Video> br = new BaseRepository<Video>();
+            var liste = br.GetAll();
+            return View(liste);
         }
-        
+        [HttpGet]
         public ActionResult VideoEkle()
         {
             return View();
         }
-        public ActionResult VideoDetay(string id)
+        [HttpPost]
+        public ActionResult VideoEkle(Video yeni)
         {
+            BaseRepository<Video> br = new BaseRepository<Video>();
+            br.Insert(yeni);
+            return View();
+        }
+        // GET: Video
+        public ActionResult Detail(int id)
+        {
+            return View(new VideoRep().GetById(id));
+        }
+
+        public JsonResult VoteVideo(int id, int points)
+        {
+            try
+            {//id için tanımlı olan Article kaydına points kadar puan ekleyelim  (TotalPoints)
+                if (Session["HasVoted_" + id] == null || (bool)Session["HasVoted_" + id] != true)
+                {
+                    VideoRep vRep = new VideoRep();
+                    Video selected = vRep.GetById(id);
+                    if (selected.TotalRate.HasValue)
+                        selected.TotalRate = selected.TotalRate.Value + points;
+                    else
+                        selected.TotalRate = points;
+                    vRep.Update(selected);
+                    Session["HasVoted_" + id] = true;
+
+                    return Json("Thank you for voting");
+                }
+                else
+                {
+                    return Json("you can't vote again!");
+                }
+            }
+            catch (Exception ex)
+            {
+
+                return Json("A problem has occured - " + ex.Message);
+            }
+        }
             // var video = (from a in EntityId.Video where a.VideoID == GelenID select a).FirstOrDefault();
             var video = new Video();
             if (video != null)
@@ -67,6 +108,8 @@ namespace Egitim5.Controllers
 
     }
 
+
+
+
     }
-
-
+}
