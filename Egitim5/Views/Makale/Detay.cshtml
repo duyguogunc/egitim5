@@ -25,13 +25,36 @@
     </div>
 </div>
 
-
+<style>
+    .right {
+        float: right;
+    }
+</style>
+<h1>@Model.Baslik</h1>
 <p>@Model.KisaAciklama</p>
+<img src="@Model.ResimBase64"/>
+<p>Görüntülenme:  @Model.GoruntulenmeSayisi</p>
 <p>
-    @Html.Raw(Model.MakaleIcerik.Replace(Environment.NewLine,"</p><p>"))
+    @Html.Raw(Model.MakaleIcerik.Replace(Environment.NewLine, "</p><p>"))
 </p>
+@if (Request.IsAuthenticated)
+{
+
+    <div class="right">
+        <h3>Bu makaleyi oylamak ister misiniz?</h3>
+        <ul class="list-inline">
+            <li><button id="1" class="glyphicon glyphicon-star" aria-hidden="true"></button></li>
+            <li><button id="2" class="glyphicon glyphicon-star" aria-hidden="true"></button></li>
+            <li><button id="3" class="glyphicon glyphicon-star" aria-hidden="true"></button></li>
+            <li><button id="4" class="glyphicon glyphicon-star" aria-hidden="true"></button></li>
+            <li><button id="5" class="glyphicon glyphicon-star" aria-hidden="true"></button></li>
+
+        </ul>
+    </div>
+}
 <hr />
 <i>@Model.EklenmeTarihi.ToLongDateString()</i>
+
 <p>
     @if (Model.Konular != null && Model.Konular.Count != 0)
     {
@@ -41,7 +64,7 @@
         }
     }
 </p>
-<hr/>
+<hr />
 @Html.Action("IlgiliMakaleler", new { id = Model.MakaleID });
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script>
@@ -55,3 +78,27 @@
     //})
 </script>
 
+
+<script>
+       $(".glyphicon-star").click(function () {
+
+           var oy = $(this).attr("id");
+           console.log(oy);
+           var MakaleID=@Model.MakaleID;
+
+           $.ajax({
+
+               url: "/Makale/MakaleOy/"+MakaleID,
+               data: { "oy": oy },
+               method: "POST",
+               success: function (cevap) {
+                   alert(cevap)
+               }
+
+           })
+
+       })
+</script>
+<hr/>
+@Html.Action("IlgiliMakaleler", new { id = Model.MakaleID })
+@Html.Action("AlakaliMakaleler", new { id = Model.MakaleID })

@@ -80,8 +80,17 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201712061357140_kurulum.resx">
-      <DependentUpon>201712061357140_kurulum.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201710040633074_kurulum.resx">
+      <DependentUpon>201710040633074_kurulum.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201710040704414_test.resx">
+      <DependentUpon>201710040704414_test.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201710040820013_kullanici.resx">
+      <DependentUpon>201710040820013_kullanici.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201710040958282_konu.resx">
+      <DependentUpon>201710040958282_konu.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

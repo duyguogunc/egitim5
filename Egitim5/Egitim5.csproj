@@ -52,6 +52,7 @@
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.IdentityModel" />
     <Reference Include="System.Net.Http.Formatting, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.3\lib\net45\System.Net.Http.Formatting.dll</HintPath>
       <Private>True</Private>
@@ -188,9 +189,11 @@
     <Compile Include="Controllers\KonuController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\SikayetController.cs" />
+    <Compile Include="Controllers\VideoController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
@@ -201,6 +204,10 @@
     <Content Include="Content\css\bootstrap.css" />
     <Content Include="Content\css\bootstrap.min.css" />
     <Content Include="Content\css\Style.css" />
+    <Content Include="Content\edit\iEdit.css" />
+    <Content Include="Content\edit\iEdit.js" />
+    <Content Include="Content\edit\iEdit.min.css" />
+    <Content Include="Content\edit\iEdit.min.js" />
     <Content Include="Content\images\logo.png" />
     <Content Include="Content\Lightbox\lightbox2-master\.gitignore" />
     <Content Include="Content\Lightbox\lightbox2-master\dist\css\lightbox.css" />
@@ -242,6 +249,7 @@
     <Content Include="Content\Lightbox\lightbox2-master\package.json" />
     <Content Include="Content\Lightbox\lightbox2-master\README.md" />
     <Content Include="Content\Lightbox\lightbox2-master\ROADMAP.md" />
+    <Content Include="Content\edit\.DS_Store" />
     <None Include="Properties\PublishProfiles\egitim5.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
@@ -305,13 +313,11 @@
     <Content Include="Views\Makale\Duzenle.cshtml" />
     <Content Include="Views\Home\SonMakaleler.cshtml" />
     <Content Include="Views\Home\SonKitaplar.cshtml" />
-    <Content Include="Views\Sikayet\Index.cshtml" />
-    <Content Include="Views\Sikayet\SikayetAdminPanel.cshtml" />
-    <Content Include="Views\Sikayet\Detay.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Content\EkitapUpload\" />
+    <Folder Include="Content\Upload\" />
     <Folder Include="logs\" />
   </ItemGroup>
   <ItemGroup>

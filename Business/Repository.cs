@@ -15,6 +15,8 @@ namespace Business
     public class KonuRep : BaseRepository<Konu> { }
     public class SikayetRep : BaseRepository<Sikayet> { }
 
-
+    public class OylamaRep : BaseRepository<Oylama> { }
+    
+  
 
 }
