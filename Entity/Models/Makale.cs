@@ -22,6 +22,7 @@ namespace Entity
 
         public int? ToplamOy { get; set; }
 
+        public int GoruntulenmeSayisi { get; set; }
         public Makale()
         {
             EklenmeTarihi = DateTime.Now;

@@ -2,13 +2,12 @@
 @using Entity.Models
 @model IEnumerable<Makale>
 @{ Layout = null;}
-@if (Model != null)
+@if (Model != null && Model.Count() != 0)
 {
-   
     <div class="container">
         <div class="row">
             <div class="col-xs-12">
-                <h2>Son Makaleler</h2>
+                <h6>Okuduğunuz makalelere benzer makaleler</h6>
                 <ul class="event-list">
                     @foreach (Makale item in Model)
                     {
@@ -24,7 +23,7 @@
                                 <ul>
                                     @if (item.Konular != null && item.Konular.Count != 0)
                                     {
-                                        foreach (Konu konu in item.Konular.Take(1))
+                                        foreach (Konu konu in item.Konular.Take(2))
                                         {
                                             <li style="width:50%;"><span class="fa fa-globe"></span> @konu.KonuBaslik</li>
                                         }
@@ -38,6 +37,5 @@
             </div>
         </div>
     </div>
-
 
 }

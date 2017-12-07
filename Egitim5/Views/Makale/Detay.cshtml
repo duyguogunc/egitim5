@@ -12,8 +12,8 @@
     }
 </style>
 <h1>@Model.Baslik</h1>
-
 <p>@Model.KisaAciklama</p>
+<p>Görüntülenme:  @Model.GoruntulenmeSayisi</p>
 <p>
     @Html.Raw(Model.MakaleIcerik.Replace(Environment.NewLine, "</p><p>"))
 </p>
@@ -68,3 +68,6 @@
 
        })
 </script>
+<hr/>
+@Html.Action("IlgiliMakaleler", new { id = Model.MakaleID })
+@Html.Action("AlakaliMakaleler", new { id = Model.MakaleID })
