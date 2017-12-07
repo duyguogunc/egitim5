@@ -187,6 +187,7 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\KonuController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\SikayetController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -304,6 +305,9 @@
     <Content Include="Views\Makale\Duzenle.cshtml" />
     <Content Include="Views\Home\SonMakaleler.cshtml" />
     <Content Include="Views\Home\SonKitaplar.cshtml" />
+    <Content Include="Views\Sikayet\Index.cshtml" />
+    <Content Include="Views\Sikayet\SikayetAdminPanel.cshtml" />
+    <Content Include="Views\Sikayet\Detay.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -322,6 +326,10 @@
     <ProjectReference Include="..\Business\Business.csproj">
       <Project>{82917378-C720-407D-B715-6EF07051AFC0}</Project>
       <Name>Business</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DAL\DAL.csproj">
+      <Project>{1EB955EF-47FF-4742-ADBC-A74721B38719}</Project>
+      <Name>DAL</Name>
     </ProjectReference>
     <ProjectReference Include="..\Entity\Entity.csproj">
       <Project>{C8BDA162-2E73-460E-87DA-9445CE657B93}</Project>

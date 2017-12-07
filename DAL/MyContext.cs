@@ -19,7 +19,7 @@ namespace DAL
         public virtual DbSet<EKitap> EKitaplar { get; set; }
         //public virtual DbSet<Kullanici> Kullanıcılar { get; set; }
         public virtual DbSet<Konu> Konular { get; set; }
-
+        public virtual DbSet<Sikayet> Sikayetler { get; set; }
     }
 }
 

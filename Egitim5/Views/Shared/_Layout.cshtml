@@ -37,7 +37,10 @@
                             @if (User.IsInRole("Admin"))
                             {
                                 <li>@Html.ActionLink("Konu Yönetimi", "Index", "Konu")</li>
+                                <li>@Html.ActionLink("Şikayet Listesi", "SikayetAdminPanel", "Sikayet")</li>
                             }
+
+
                         </ul>@using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm", @class = "navbar-right" }))
                         {
                             <ul class="nav navbar-nav pull-right">
@@ -78,7 +81,8 @@
     @Scripts.Render("~/bundles/bootstrap")
     @RenderSection("Scripts", required: false)
     @Scripts.Render("~/MainScript")
-    <div class="container" id="wrapper">@RenderBody()</div>
+    <div class="container" id="wrapper">@RenderBody()
+    </div>
 
 </body>
 </html>

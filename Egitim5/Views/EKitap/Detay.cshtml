@@ -5,12 +5,29 @@
     ViewBag.Title = "Detay";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-<h1>@Model.Baslik</h1>
+<style>
+    .skbtn {
+        position: relative;
+        top: 30px;
+    }
+</style>
+<div class="container">
+    <div class="row ">
+        <div>
+            <h1 class="col-md-8">@Model.Baslik</h1>
+            @if (Request.IsAuthenticated)
+            {
+             @Html.ActionLink("Şikayet Et", "Index", "Sikayet", new { KitapId = Model.EKitapID }, new { @class = "btn btn-xs btn-danger skbtn" })
+            }
+        </div>
+    </div>
+</div>
+
 <p>@Model.KisaAciklama</p>
 <p>@Model.EKitapIcerik</p>
-<hr/>
+<hr />
 <a href="~/Content/EkitapUpload/@Model.EKitapURL" target="_blank">E-Kitabı görüntülemek için tıklayın.</a>
-<hr/>
+<hr />
 <i>@Model.EklenmeTarihi.ToLongDateString()</i>
 <p>
     @if (Model.Konular != null && Model.Konular.Count != 0)

@@ -16,12 +16,12 @@ namespace Egitim5.Controllers
 
         public ActionResult SonMakaleler()
         {
-            return View(new MakaleRep().GetAll().Take(2));
+            return View(new MakaleRep().GetAll().Take(1));
         }
 
         public ActionResult SonKitaplar()
         {
-            return View(new EkitapRep().GetAll().Take(2));
+            return View(new EkitapRep().GetAll().Take(1));
         }
     }
 }

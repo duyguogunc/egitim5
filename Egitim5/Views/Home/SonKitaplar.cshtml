@@ -16,7 +16,7 @@
                             <span class="year">@item.EklenmeTarihi.Year</span>
                         </time>
                         <div class="info">
-                            <h2 class="title">@item.Baslik</h2>
+                            <h2 class="title"><a href="/EKitap/Detay/@item.EKitapID">@item.Baslik</a></h2>
                             <p class="desc">@item.EKitapIcerik</p>
                             <ul>
                                 @if (item.Konular != null && item.Konular.Count != 0)
