@@ -1,8 +1,10 @@
 ﻿using Business;
 using Entity;
 using Entity.Models;
+using Microsoft.AspNet.Identity;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Web;
 using System.Web.Helpers;
@@ -69,7 +71,6 @@ namespace Egitim5.Controllers
 
         public ActionResult IlgiliMakaleler(int id)
         {
-
             Makale simdiki = new MakaleRep().GetById(id);
             List<int> konular = simdiki.Konular.Select(a => a.KonuID).ToList();
             if (konular != null)
@@ -115,6 +116,50 @@ namespace Egitim5.Controllers
                 return RedirectToAction("Index");
             }
             return View();
+        }
+
+        
+        public JsonResult MakaleOy(int oy, int id)
+        {
+            
+            try
+            {
+                if (Session["HasVoted_" + id] == null || (bool)Session["HasVoted_" + id] != true)
+                {
+                    Oylama o = new Oylama();
+                    MakaleRep mrep = new MakaleRep();
+                    OylamaRep orep = new OylamaRep();
+                    Makale secilen = mrep.GetById(id);
+                    string isim = User.Identity.GetUserName();
+
+                    if (secilen.ToplamOy.HasValue)
+                    {
+                        secilen.ToplamOy = secilen.ToplamOy.Value + oy;
+                        o.MakaleAdi = secilen.Baslik;
+                        o.Oy = oy;
+                        o.KullaniciAdi = isim;
+                        orep.Insert(o);                                                
+                    }
+
+                    else
+                    {
+                        secilen.ToplamOy = oy;
+                        o.MakaleAdi = secilen.Baslik;
+                        o.Oy = oy;
+                        o.KullaniciAdi = isim;
+                        orep.Insert(o);
+                    }
+                    mrep.Update(secilen);
+                    Session["Hasvoted_" + id] = true;
+                    return Json("Oy verdiğiniz için teşekkürler.");
+                }
+                else
+                    return Json("Tekrar oy veremezsiniz.");
+            }
+            catch (Exception ex)
+            {
+                return Json("Bir hata oluştu." + ex.Message);
+            }
         }
     }
 
