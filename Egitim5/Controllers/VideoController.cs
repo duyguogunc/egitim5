@@ -36,7 +36,10 @@ namespace Egitim5.Controllers
         // GET: Video
         public ActionResult Detail(int id)
         {
-            return View(new VideoRep().GetById(id));
+            Video v = new VideoRep().GetById(id);
+            v.VideoGoruntulenmeSayisi++;
+            new VideoRep().Update(v);
+            return View(v);
         }
 
         public JsonResult VoteVideo(int id, int points)
@@ -68,13 +71,13 @@ namespace Egitim5.Controllers
             }
         }
             // var video = (from a in EntityId.Video where a.VideoID == GelenID select a).FirstOrDefault();
-            var video = new Video();
-            if (video != null)
-            {
-                ViewBag.Baslik = video.Baslik;
-                //ViewBag.Icerik = video.Video1;
-            }
-            return View();
+            //Video video = new Video();
+            //if (video != null)
+            //{
+            //    ViewBag.Baslik = video.Baslik;
+            //    //ViewBag.Icerik = video.Video1;
+            //}
+            //return View();
         }
     
         [HttpGet]

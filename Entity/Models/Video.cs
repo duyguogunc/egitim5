@@ -20,6 +20,8 @@ namespace Entity.Models
         public string Aciklama { get; set; }
         public int IzlenmeSayisi { get; set; }
         public DateTime EklenmeTarihi { get; set; }
+        public int? TotalRate { get; set; }
+        public int VideoGoruntulenmeSayisi { get; set; }
         public Video()
         {
             IzlenmeSayisi = 0;

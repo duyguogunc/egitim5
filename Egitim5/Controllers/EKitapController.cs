@@ -101,6 +101,7 @@ namespace Egitim5.Controllers
         {
             EKitap k = new EkitapRep().GetById(id);
             k.EKitapGoruntulenmeSayisi++;
+            new EkitapRep().Update(k);
             return View(k);
         }
 

@@ -64,6 +64,8 @@ namespace Egitim5.Controllers
         public ActionResult Detay(int id)
         {
             Makale k = new MakaleRep().GetById(id);
+            k.GoruntulenmeSayisi++;
+            new MakaleRep().Update(k);
             //duruma göre içerikteki kelimeler de eklenebilir.
             Session["text"] += " " + k.Baslik;
             return View(k);
