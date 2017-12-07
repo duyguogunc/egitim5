@@ -14,7 +14,8 @@ namespace Entity
     {
         [Key]
         public int MakaleID { get; set; }
-
+        public string ResimURL { get; set; }
+        public string ResimBase64 { get; set; }
         [DisplayName("Makale İçeriği")]
         public string MakaleIcerik { get; set; }
         [DisplayName("Makale Eklenme Tarihi")]

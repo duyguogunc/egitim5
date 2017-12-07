@@ -15,3 +15,6 @@ select,
 textarea {
     max-width: 280px;
 }
+.dl-horizontal dt {
+    white-space: normal;
+}

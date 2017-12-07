@@ -200,6 +200,10 @@
     <Content Include="Content\css\bootstrap.css" />
     <Content Include="Content\css\bootstrap.min.css" />
     <Content Include="Content\css\Style.css" />
+    <Content Include="Content\edit\iEdit.css" />
+    <Content Include="Content\edit\iEdit.js" />
+    <Content Include="Content\edit\iEdit.min.css" />
+    <Content Include="Content\edit\iEdit.min.js" />
     <Content Include="Content\images\logo.png" />
     <Content Include="Content\Lightbox\lightbox2-master\.gitignore" />
     <Content Include="Content\Lightbox\lightbox2-master\dist\css\lightbox.css" />
@@ -241,6 +245,7 @@
     <Content Include="Content\Lightbox\lightbox2-master\package.json" />
     <Content Include="Content\Lightbox\lightbox2-master\README.md" />
     <Content Include="Content\Lightbox\lightbox2-master\ROADMAP.md" />
+    <Content Include="Content\edit\.DS_Store" />
     <None Include="Properties\PublishProfiles\egitim5.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
@@ -308,6 +313,7 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Content\EkitapUpload\" />
+    <Folder Include="Content\Upload\" />
     <Folder Include="logs\" />
   </ItemGroup>
   <ItemGroup>
