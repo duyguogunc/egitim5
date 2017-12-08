@@ -57,9 +57,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Migrations\201712081238436_guncelle.cs" />
-    <Compile Include="Migrations\201712081238436_guncelle.Designer.cs">
-      <DependentUpon>201712081238436_guncelle.cs</DependentUpon>
+    <Compile Include="Migrations\201712081322591_uyuu.cs" />
+    <Compile Include="Migrations\201712081322591_uyuu.Designer.cs">
+      <DependentUpon>201712081322591_uyuu.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="MyContext.cs" />
@@ -80,8 +80,8 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201712081238436_guncelle.resx">
-      <DependentUpon>201712081238436_guncelle.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201712081322591_uyuu.resx">
+      <DependentUpon>201712081322591_uyuu.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
