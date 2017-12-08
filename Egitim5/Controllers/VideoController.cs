@@ -1,13 +1,6 @@
 ﻿using Business;
-using DAL;
-using Entity;
 using Entity.Models;
 using System;
-using System.Collections.Generic;
-using System.IdentityModel.Metadata;
-using System.IO;
-using System.Linq;
-using System.Web;
 using System.Web.Mvc;
 
 namespace Egitim5.Controllers
@@ -17,7 +10,7 @@ namespace Egitim5.Controllers
         // GET: Video
         public ActionResult Index()
         {
-            BaseRepository<Video> br = new BaseRepository<Video>();
+            VideoRep br = new VideoRep();
             var liste = br.GetAll();
             return View(liste);
         }
@@ -29,14 +22,15 @@ namespace Egitim5.Controllers
         [HttpPost]
         public ActionResult VideoEkle(Video yeni)
         {
-            BaseRepository<Video> br = new BaseRepository<Video>();
+            VideoRep br = new VideoRep();
             br.Insert(yeni);
             return View();
         }
         // GET: Video
         public ActionResult Detail(int id)
         {
-            Video v = new VideoRep().GetById(id);
+            var vRep = new VideoRep();
+            Video v = vRep.GetById(id);
             v.VideoGoruntulenmeSayisi++;
             new VideoRep().Update(v);
             return View(v);
@@ -70,16 +64,7 @@ namespace Egitim5.Controllers
                 return Json("A problem has occured - " + ex.Message);
             }
         }
-            // var video = (from a in EntityId.Video where a.VideoID == GelenID select a).FirstOrDefault();
-            //Video video = new Video();
-            //if (video != null)
-            //{
-            //    ViewBag.Baslik = video.Baslik;
-            //    //ViewBag.Icerik = video.Video1;
-            //}
-            //return View();
-        }
-    
+        
         [HttpGet]
 
         public ActionResult Duzenle(int? id)
@@ -94,25 +79,19 @@ namespace Egitim5.Controllers
 
         public ActionResult Duzenle(Video duzenlenenvideo)
         {
-            MyContext db = new MyContext();
-            var eski = db.Videolar.Find(duzenlenenvideo.VideoID);
+          var vRep=  new VideoRep();
+            var eski = vRep.GetById(duzenlenenvideo.VideoID);
             eski.VideoURL = duzenlenenvideo.VideoURL;
             eski.Aciklama = duzenlenenvideo.Aciklama;
             eski.IzlenmeSayisi = duzenlenenvideo.IzlenmeSayisi;
             eski.EklenmeTarihi = duzenlenenvideo.EklenmeTarihi;
             eski.Baslik = duzenlenenvideo.Baslik;
             eski.KisaAciklama = duzenlenenvideo.KisaAciklama;
-            db.Entry(eski).State = System.Data.Entity.EntityState.Modified;
             if(ModelState.IsValid)
-            db.SaveChanges();
+            vRep.Update(eski);
 
             return View(duzenlenenvideo);
         }
-
-    }
-
-
-
 
     }
 }

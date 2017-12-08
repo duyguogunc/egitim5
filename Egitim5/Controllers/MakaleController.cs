@@ -1,5 +1,4 @@
 ﻿using Business;
-using Entity;
 using Entity.Models;
 using Microsoft.AspNet.Identity;
 using System;
@@ -8,9 +7,7 @@ using System.Data.Entity;
 using System.IO;
 using System.Linq;
 using System.Web;
-using System.Web.Helpers;
 using System.Web.Mvc;
-using Utility;
 
 namespace Egitim5.Controllers
 {

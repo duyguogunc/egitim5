@@ -1,12 +1,12 @@
 namespace DAL.Migrations
 {
-    using Entity;
     using Utility;
     using Microsoft.AspNet.Identity;
     using Microsoft.AspNet.Identity.EntityFramework;
     using System;
     using System.Data.Entity.Migrations;
     using System.Linq;
+    using Entity.Models;
 
     internal sealed class Configuration : DbMigrationsConfiguration<DAL.MyContext>
     {
