@@ -3,9 +3,13 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - My ASP.NET Application</title>
+    <title>@ViewBag.Title</title>
+    <meta name="description" content="@ViewBag.Description" />
+    <meta name="keywords" content="@ViewBag.Keywords" />
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
+    <link href="~/Content/css/Search.css" rel="stylesheet" />
+    
     @RenderSection("CSS", false)
     <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.1.0/css/font-awesome.min.css" />
 </head>
@@ -34,11 +38,17 @@
                             <li @Html.Raw(Request.RequestContext.RouteData.Values["Controller"].ToString() == "EKitap" ? "class='active'" : "")>
                                 @Html.ActionLink("E-Kitaplar", "Index", "EKitap")
                             </li>
+                            <li @Html.Raw(Request.RequestContext.RouteData.Values["Controller"].ToString() == "Video" ? "class='active'" : "")>
+                                @Html.ActionLink("Videolar", "Index", "Video")
+                            </li>
                             @if (User.IsInRole("Admin"))
                             {
                                 <li>@Html.ActionLink("Konu Yönetimi", "Index", "Konu")</li>
+                                <li>@Html.ActionLink("Şikayet Listesi", "SikayetAdminPanel", "Sikayet")</li>
                             }
-                        </ul>@using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm", @class = "navbar-right" }))
+                            
+                        </ul>
+                        @using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm", @class = "navbar-right" }))
                         {
                             <ul class="nav navbar-nav pull-right">
                                 @if (User.Identity.IsAuthenticated)
@@ -59,6 +69,7 @@
                                 }
                                 else
                                 {
+
                                     <li @Html.Raw(Request.RequestContext.RouteData.Values["Action"].ToString() == "Register" ? "class='active'" : "")>
                                         <a href="/Account/Register/">Kayıt Ol</a>
                                     </li>
@@ -68,6 +79,15 @@
                                 }
                             </ul>
                         }
+                        <ul class="pull-right">
+                            <li style="list-style:none">
+                                <button type="button" data-toggle="modal" data-target="#myModal" class="btn btn-default navbar-btn">
+                                    <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+                                </button>
+                            </li>
+                        </ul>
+                        
+                        @* buraya arama kısmı gelecek *@
                     </div>
                 </div>
             </nav>
@@ -78,7 +98,33 @@
     @Scripts.Render("~/bundles/bootstrap")
     @RenderSection("Scripts", required: false)
     @Scripts.Render("~/MainScript")
+    <script src="~/Scripts/Search.js"></script>
     <div class="container" id="wrapper">@RenderBody()</div>
 
+
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span class="glyphicon glyphicon-off"></span></button>
+                    </div>
+                    <h1>Makale, E-kitap ya da Video Arayın</h1>
+                    <br />
+                    <form class="navbar-form " action="/Home/Ara" method="get" role="search">
+                        <div class="form-group">
+                            <input name="aranan" type="text" class="form-control" style="width:700px;" placeholder="Aranacak kelime...">
+                        </div>
+                        <br />
+                        <br />
+                        <button type="submit" class="btn btn-info" style="width:350px;">Ara</button>
+                    </form>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
 </body>
 </html>

@@ -99,6 +99,8 @@ namespace Egitim5.Controllers
         {
             ViewBag.gelen = "EKitap";
             EKitap k = new EkitapRep().GetById(id);
+            k.EKitapGoruntulenmeSayisi++;
+            new EkitapRep().Update(k);
             return View(k);
         }
         public ActionResult IlgiliKitaplar(int id)

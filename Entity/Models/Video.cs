@@ -1,4 +1,4 @@
-﻿using Entity.Models;
+﻿
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Entity
+namespace Entity.Models
 {
     public class Video : Icerik
     {
@@ -20,10 +20,13 @@ namespace Entity
         public string Aciklama { get; set; }
         public int IzlenmeSayisi { get; set; }
         public DateTime EklenmeTarihi { get; set; }
+        public int? TotalRate { get; set; }
+        public int VideoGoruntulenmeSayisi { get; set; }
         public Video()
         {
             IzlenmeSayisi = 0;
             EklenmeTarihi = DateTime.Today;
         }
+        public int? TotalRate { get; set; }
     }
 }

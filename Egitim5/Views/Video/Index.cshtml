@@ -1,0 +1,118 @@
+﻿
+@model IEnumerable<Entity.Video>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Video Ekleme Sayfasına Git", "VideoEkle")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.VideoURL)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Aciklama)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IzlenmeSayisi)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EklenmeTarihi)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Baslik)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.KisaAciklama)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Title)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Keywords)
+        </th>
+        <th></th>
+    </tr>
+    
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            <div>
+            <iframe  width="640" height="360" src="//www.izlesene.com/embedplayer/10079318/?showrel=1&loop=0&autoplay=0&autohide=1&showinfo=1&socialbuttons=1" allowfullscreen="true" frameborder="0"></iframe>         
+            <div class="well">
+                <ul class="list-inline">
+                    <li><button id="1" class="glyphicon glyphicon-star" aria-hidden="true"></button></li>
+                    <li><button id="2" class="glyphicon glyphicon-star" aria-hidden="true"></button></li>
+                    <li><button id="3" class="glyphicon glyphicon-star" aria-hidden="true"></button></li>
+                    <li><button id="4" class="glyphicon glyphicon-star" aria-hidden="true"></button></li>
+                    <li><button id="5" class="glyphicon glyphicon-star" aria-hidden="true"></button></li>
+                </ul>
+            </div>
+                </div>
+            <div class="videoid" rel="@item.VideoID"></div>
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Aciklama)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IzlenmeSayisi)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EklenmeTarihi)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Baslik)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.KisaAciklama)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Title)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Description)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Keywords)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.VideoID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.VideoID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.VideoID })
+        </td>
+    </tr>
+
+}
+
+</table>
+
+
+
+<script>
+       $(".glyphicon-star").click(function () {
+
+           var id = $(this).attr("id");
+
+           console.log(id);
+           var videoID = $(".videoid").attr("rel");
+           console.log(videoID);
+
+           $.ajax({
+               url: "/Video/VoteVideo/"+videoID,//url ile gonderdik
+               data: {"points":id},//data ile gonderdik route configde yer yoktu
+               method: "POST",
+               success: function(data){
+                   alert(data);
+               }
+           });
+       });
+</script>
