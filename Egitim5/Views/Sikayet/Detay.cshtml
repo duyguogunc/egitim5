@@ -1,0 +1,24 @@
+﻿@model Entity.Models.Sikayet
+@{
+    ViewBag.Title = "Detay";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<style>
+    #alan{
+        width:300px;
+    }
+</style>
+<div class="container col-md-">
+<p>@Model.SikayetTarihi</p>
+<h2>@Model.SikayetSebep</h2>
+
+
+    <blockquote class="blockquote">
+        <p class="mb-0">@Model.SikayetMesaj</p>
+    </blockquote>
+
+    
+      
+    
+</div>
+

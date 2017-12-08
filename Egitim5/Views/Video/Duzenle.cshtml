@@ -1,0 +1,44 @@
+﻿@model Entity.Models.Video
+    @using Entity.Models
+
+@{
+    ViewBag.Title = "Duzenle";
+}
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="form_main">
+                <h4 class="heading"><strong>Video </strong> Düzenle <span></span></h4>
+                <div class="form">
+                    @using (Html.BeginForm())
+                    {
+                        @Html.AntiForgeryToken()
+
+                        if (!ViewData.ModelState.IsValid)
+                        {
+                            <div class="alert alert-danger">
+                                @Html.ValidationSummary()
+                            </div>
+                        }
+                        @Html.HiddenFor(x=> x.VideoID)
+                        @Html.TextBoxFor(x => x.VideoURL, new { @class = "txt",@value=Model.VideoURL, @placeholder = "VideoURL", @required = "required" })
+
+                        @Html.TextBoxFor(x => x.Aciklama, new { @class = "txt", @value = Model.Aciklama, @placeholder = "Aciklama", @required = "required" })
+
+                        @Html.TextBoxFor(x => x.IzlenmeSayisi, new { @class = "txt", @value = Model.IzlenmeSayisi, @placeholder = "IzlenmeSayisi", @required = "required" })
+
+                        @Html.TextBoxFor(x => x.EklenmeTarihi, new { @class = "txt", @value = Model.EklenmeTarihi, @placeholder = "EklenmeTarihi", @required = "required" })
+
+                        @Html.TextBoxFor(x => x.Baslik, new { @class = "txt", @value = Model.Baslik, @placeholder = "Baslik", @required = "required" })
+
+                        @Html.TextBoxFor(x => x.KisaAciklama, new { @class = "txt", @value = Model.KisaAciklama, @placeholder = "KisaAciklama", @required = "required" })
+
+                        <input type="submit" value="submit" name="submit" class="txt2">
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

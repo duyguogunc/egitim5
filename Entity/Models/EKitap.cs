@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Entity
+namespace Entity.Models
 {
     public class EKitap : Icerik
     {
@@ -17,6 +17,7 @@ namespace Entity
         public string EKitapIcerik { get; set; }
         public DateTime EklenmeTarihi { get; set; }
         public string EKitapURL { get; set; }
+        public int EKitapGoruntulenmeSayisi { get; set; }
         public EKitap()
         {
             EklenmeTarihi = DateTime.Now;
