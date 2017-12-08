@@ -1,0 +1,48 @@
+﻿/* Jacob Lett - https//BootstrapCreative.com - Reference / Refresh / Repetition */
+
+.modal-header {
+  border-bottom: none;
+}
+
+.modal-dialog {
+  width: 100%;
+  height: 100%;
+  /*margin: 0;
+  padding: 0;*/
+}
+
+.modal-backdrop {
+background-color:#fff;
+  opacity:1!important;
+    /*border: 10px solid rgba(136, 136, 136, .4);*/
+}
+
+.modal-content {
+  height: auto;
+  min-height: 100%;
+  border-radius: 0;
+  background: none;
+  box-shadow: none;
+}
+
+.modal-body {
+  text-align: center;
+}
+
+.modal-body form {
+  margin: 0 auto;
+  float: none;
+  width: 100%;
+}
+
+.modal-content .close {
+    width:50px;
+    height:50px;
+  opacity: 1;
+  font-size: 30px;
+}
+
+.navbar-default .navbar-collapse,
+.navbar-default .navbar-form {
+  border: none;
+}

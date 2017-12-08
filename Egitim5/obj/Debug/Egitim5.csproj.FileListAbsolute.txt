@@ -162,6 +162,7 @@ C:\Users\nuuklu\Source\Repos\egitim5\Egitim5\bin\DAL.pdb
 C:\Users\nuuklu\Source\Repos\egitim5\Egitim5\obj\Debug\Egitim5.csprojResolveAssemblyReference.cache
 C:\Users\nuuklu\Source\Repos\egitim5\Egitim5\obj\Debug\Egitim5.dll
 C:\Users\nuuklu\Source\Repos\egitim5\Egitim5\obj\Debug\Egitim5.pdb
+<<<<<<< HEAD
 C:\Users\nuuklu\Documents\Visual Studio 2015\Projects\egitim5\Egitim5\bin\roslyn\csc.exe
 C:\Users\nuuklu\Documents\Visual Studio 2015\Projects\egitim5\Egitim5\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
 C:\Users\nuuklu\Documents\Visual Studio 2015\Projects\egitim5\Egitim5\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
@@ -245,3 +246,5 @@ C:\Users\nuuklu\Documents\Visual Studio 2015\Projects\egitim5\Egitim5\bin\DAL.pd
 C:\Users\nuuklu\Documents\Visual Studio 2015\Projects\egitim5\Egitim5\obj\Debug\Egitim5.csprojResolveAssemblyReference.cache
 C:\Users\nuuklu\Documents\Visual Studio 2015\Projects\egitim5\Egitim5\obj\Debug\Egitim5.dll
 C:\Users\nuuklu\Documents\Visual Studio 2015\Projects\egitim5\Egitim5\obj\Debug\Egitim5.pdb
+=======
+>>>>>>> 364cedb898becf01efb4579e8ca09ab8e803274f

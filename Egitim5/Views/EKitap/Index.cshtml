@@ -60,6 +60,14 @@
                                 </span>
                             </li>
                         </ul>
+                        <ul class="list-inline list-unstyled"></ul>
+                        @if (item.Title != null && item.Description != null & item.Keywords != null)
+                        {
+                            <p><strong><b>SEO Bilgileri:</b></strong></p>
+                            <p>@item.Title</p>
+                            <p>@item.Description</p>
+                            <p>@item.Keywords</p>
+                        }
                     </div>
                 </div>
             </div>

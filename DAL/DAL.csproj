@@ -57,21 +57,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Migrations\201710040633074_kurulum.cs" />
-    <Compile Include="Migrations\201710040633074_kurulum.Designer.cs">
-      <DependentUpon>201710040633074_kurulum.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201710040704414_test.cs" />
-    <Compile Include="Migrations\201710040704414_test.Designer.cs">
-      <DependentUpon>201710040704414_test.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201710040820013_kullanici.cs" />
-    <Compile Include="Migrations\201710040820013_kullanici.Designer.cs">
-      <DependentUpon>201710040820013_kullanici.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201710040958282_konu.cs" />
-    <Compile Include="Migrations\201710040958282_konu.Designer.cs">
-      <DependentUpon>201710040958282_konu.cs</DependentUpon>
+    <Compile Include="Migrations\201712081238436_guncelle.cs" />
+    <Compile Include="Migrations\201712081238436_guncelle.Designer.cs">
+      <DependentUpon>201712081238436_guncelle.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="MyContext.cs" />
@@ -82,6 +70,7 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+<<<<<<< HEAD
     <EmbeddedResource Include="Migrations\201710040633074_kurulum.resx">
       <DependentUpon>201710040633074_kurulum.cs</DependentUpon>
     </EmbeddedResource>
@@ -93,6 +82,20 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201710040958282_konu.resx">
       <DependentUpon>201710040958282_konu.cs</DependentUpon>
+=======
+    <ProjectReference Include="..\Entity\Entity.csproj">
+      <Project>{C8BDA162-2E73-460E-87DA-9445CE657B93}</Project>
+      <Name>Entity</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Utility\Utility.csproj">
+      <Project>{5C0FF445-422A-4633-B710-313FF289D6CB}</Project>
+      <Name>Utility</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201712081238436_guncelle.resx">
+      <DependentUpon>201712081238436_guncelle.cs</DependentUpon>
+>>>>>>> 364cedb898becf01efb4579e8ca09ab8e803274f
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

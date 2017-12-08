@@ -1,0 +1,15 @@
+﻿@{
+    ViewBag.Title = "Ara";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Arama Sonuçları</h2>
+<h3>Eşleşen Makaleler</h3>
+@Html.Action("MakaleSonuclar")
+<hr />
+<h3>Eşleşen Kitaplar</h3>
+@Html.Action("EkitapSonuclar")
+<hr />
+<h3>Eşleşen Videolar</h3>
+@Html.Action("VideoSonuclar")
+

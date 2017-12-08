@@ -62,7 +62,12 @@
     <Compile Include="Models\Konu.cs" />
     <Compile Include="Models\Kullanici.cs" />
     <Compile Include="Models\Makale.cs" />
+<<<<<<< HEAD
     <Compile Include="Models\Yorum.cs" />
+=======
+    <Compile Include="Models\Oylama.cs" />
+    <Compile Include="Models\Sikayet.cs" />
+>>>>>>> 364cedb898becf01efb4579e8ca09ab8e803274f
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Models\Video.cs" />
     <Compile Include="ViewModels\KonuViewModel.cs" />

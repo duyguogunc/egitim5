@@ -1,10 +1,7 @@
 ﻿using Business;
-using Entity.Models;
 using Entity.ViewModels;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Web;
 using System.Web.Mvc;
 
 namespace Egitim5.Controllers
