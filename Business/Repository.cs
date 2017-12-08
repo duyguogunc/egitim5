@@ -8,5 +8,6 @@ namespace Business
     public class KonuRep : BaseRepository<Entity.Models.Konu> { }
     public class SikayetRep : BaseRepository<Entity.Models.Sikayet> { }
     public class OylamaRep : BaseRepository<Entity.Models.Oylama> { }
+    public class YorumRep : BaseRepository<Entity.Models.Yorum> { }
     
 }
