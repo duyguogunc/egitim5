@@ -1,0 +1,19 @@
+﻿@using Entity.Models
+@model List<Sikayet>
+    
+  
+@{
+    ViewBag.Title = "SikayetAdminPanel";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<h2>Şikayet Listesi</h2>
+<div class="list-group">
+    @foreach (Sikayet item in Model)
+    {
+        <a href="/sikayet/detay/@item.SikayetID" class="list-group-item list-group-item-heading ">@item.SikayetSebep </a>
+    }
+</div>
+
+

@@ -3,9 +3,6 @@ using Entity;
 using Entity.Models;
 using Microsoft.AspNet.Identity;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 using System.Web.Mvc;
 
 namespace Egitim5.Controllers
@@ -15,7 +12,7 @@ namespace Egitim5.Controllers
         // GET: Video
         public ActionResult Index()
         {
-            BaseRepository<Video> br = new BaseRepository<Video>();
+            VideoRep br = new VideoRep();
             var liste = br.GetAll();
             return View(liste);
         }
@@ -27,14 +24,18 @@ namespace Egitim5.Controllers
         [HttpPost]
         public ActionResult VideoEkle(Video yeni)
         {
-            BaseRepository<Video> br = new BaseRepository<Video>();
+            VideoRep br = new VideoRep();
             br.Insert(yeni);
             return View();
         }
         // GET: Video
         public ActionResult Detail(int id)
         {
-            return View(new VideoRep().GetById(id));
+            var vRep = new VideoRep();
+            Video v = vRep.GetById(id);
+            v.VideoGoruntulenmeSayisi++;
+            new VideoRep().Update(v);
+            return View(v);
         }
 
         public JsonResult VoteVideo(int id, int points)
@@ -83,9 +84,34 @@ namespace Egitim5.Controllers
                 return Json("A problem has occured - " + ex.Message);
             }
         }
+        
+        [HttpGet]
 
+        public ActionResult Duzenle(int? id)
+        {
+            Video duzenlenecek = new VideoRep().GetById((int)id);
 
+            
+            return View(duzenlenecek);
+        }
 
+        [HttpPost]
+
+        public ActionResult Duzenle(Video duzenlenenvideo)
+        {
+          var vRep=  new VideoRep();
+            var eski = vRep.GetById(duzenlenenvideo.VideoID);
+            eski.VideoURL = duzenlenenvideo.VideoURL;
+            eski.Aciklama = duzenlenenvideo.Aciklama;
+            eski.IzlenmeSayisi = duzenlenenvideo.IzlenmeSayisi;
+            eski.EklenmeTarihi = duzenlenenvideo.EklenmeTarihi;
+            eski.Baslik = duzenlenenvideo.Baslik;
+            eski.KisaAciklama = duzenlenenvideo.KisaAciklama;
+            if(ModelState.IsValid)
+            vRep.Update(eski);
+
+            return View(duzenlenenvideo);
+        }
 
     }
 }
