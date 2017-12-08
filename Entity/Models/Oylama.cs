@@ -14,6 +14,7 @@ namespace Entity.Models
         [Display(Name ="Oy Sayısı")]
         public int Oy { get; set; }
 
-        public string HangiVideo { get; set; } 
+        public string HangiVideo { get; set; }
+        public string MakaleAdi { get; set; }
     }
 }
