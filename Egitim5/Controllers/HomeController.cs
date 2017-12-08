@@ -23,5 +23,6 @@ namespace Egitim5.Controllers
         {
             return View(new EkitapRep().GetAll().Take(2));
         }
+       
     }
 }

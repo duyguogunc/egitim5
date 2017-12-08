@@ -13,7 +13,7 @@ namespace Business
     public class MakaleRep : BaseRepository<Makale> { }
     public class EkitapRep : BaseRepository<EKitap> { }
     public class KonuRep : BaseRepository<Konu> { }
-
+    public class OyRep : BaseRepository<Oylama> { }
 
 
 }

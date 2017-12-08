@@ -34,6 +34,9 @@
                             <li @Html.Raw(Request.RequestContext.RouteData.Values["Controller"].ToString() == "EKitap" ? "class='active'" : "")>
                                 @Html.ActionLink("E-Kitaplar", "Index", "EKitap")
                             </li>
+                            <li @Html.Raw(Request.RequestContext.RouteData.Values["Controller"].ToString() == "Video" ? "class='active'" : "")>
+                                @Html.ActionLink("Videolar", "Index", "Video")
+                            </li>
                             @if (User.IsInRole("Admin"))
                             {
                                 <li>@Html.ActionLink("Konu Yönetimi", "Index", "Konu")</li>

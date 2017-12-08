@@ -46,7 +46,8 @@
 @foreach (var item in Model) {
     <tr>
         <td>
-            <iframe width="640" height="360" src="//www.izlesene.com/embedplayer/10079318/?showrel=1&loop=0&autoplay=0&autohide=1&showinfo=1&socialbuttons=1" allowfullscreen="true" frameborder="0"></iframe>
+            <div>
+            <iframe  width="640" height="360" src="//www.izlesene.com/embedplayer/10079318/?showrel=1&loop=0&autoplay=0&autohide=1&showinfo=1&socialbuttons=1" allowfullscreen="true" frameborder="0"></iframe>         
             <div class="well">
                 <ul class="list-inline">
                     <li><button id="1" class="glyphicon glyphicon-star" aria-hidden="true"></button></li>
@@ -56,6 +57,7 @@
                     <li><button id="5" class="glyphicon glyphicon-star" aria-hidden="true"></button></li>
                 </ul>
             </div>
+                </div>
             <div class="videoid" rel="@item.VideoID"></div>
         </td>
         <td>

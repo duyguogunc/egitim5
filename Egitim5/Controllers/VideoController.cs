@@ -1,5 +1,7 @@
 ﻿using Business;
 using Entity;
+using Entity.Models;
+using Microsoft.AspNet.Identity;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -41,13 +43,31 @@ namespace Egitim5.Controllers
             {//id için tanımlı olan Article kaydına points kadar puan ekleyelim  (TotalPoints)
                 if (Session["HasVoted_" + id] == null || (bool)Session["HasVoted_" + id] != true)
                 {
+                    OyRep rep = new OyRep();
+                    Oylama o = new Oylama();
                     VideoRep vRep = new VideoRep();
                     Video selected = vRep.GetById(id);
+                    string isim = User.Identity.GetUserName();
                     if (selected.TotalRate.HasValue)
+                    {
                         selected.TotalRate = selected.TotalRate.Value + points;
+                        o.Oy = points;
+                        o.KullaniciAdi = isim;
+                        o.HangiVideo = selected.Baslik;
+                        rep.Insert(o);
+                    }
+
+
+
                     else
+                    {
                         selected.TotalRate = points;
-                    vRep.Update(selected);
+                        o.Oy = points;
+                        o.KullaniciAdi = isim;
+                        o.HangiVideo = selected.Baslik;
+                        rep.Insert(o);
+                    }
+                        vRep.Update(selected);
                     Session["HasVoted_" + id] = true;
 
                     return Json("Thank you for voting");
