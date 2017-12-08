@@ -7,14 +7,14 @@ using System.Threading.Tasks;
 
 namespace Entity.Models
 {
-    public class Oylama
-    {
-        [Key]
+   public class Oylama
+    {   [Key]
         public int OylamaID { get; set; }
-        public int? Oy { get; set; }
         public string KullaniciAdi { get; set; }
+        [Display(Name ="Oy Sayısı")]
+        public int Oy { get; set; }
 
+        public string HangiVideo { get; set; }
         public string MakaleAdi { get; set; }
-            
     }
 }
