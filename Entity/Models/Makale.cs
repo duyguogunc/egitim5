@@ -19,9 +19,11 @@ namespace Entity
         public string MakaleIcerik { get; set; }
         [DisplayName("Makale Eklenme Tarihi")]
         public DateTime EklenmeTarihi { get; set; }
+        public string ResimURL { get; set; }
         public Makale()
         {
             EklenmeTarihi = DateTime.Now;
         }
+
     }
 }

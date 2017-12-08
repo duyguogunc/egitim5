@@ -3,6 +3,7 @@ using Entity;
 using Entity.Models;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Web;
 using System.Web.Helpers;
@@ -30,10 +31,28 @@ namespace Egitim5.Controllers
 
         [HttpPost]
         [Authorize(Roles = "Admin, MakaleModerator")]
-        [ValidateAntiForgeryToken]
-        public ActionResult MakaleEkle(Makale k, List<int> SecilenKonular)
+        public ActionResult MakaleEkle(Makale k, List<int> SecilenKonular, HttpPostedFileBase resim)
         {
-            if (SecilenKonular != null && SecilenKonular.Count == 0)
+            var klasor = Server.MapPath("/Content/Upload/");
+            if (resim != null && resim.ContentLength != 0)
+            {
+                if (resim.ContentLength > 2 * 1024 * 1024)
+                    ModelState.AddModelError(null, "Resim boyutu max 2MB olabilir.");
+                else
+                {
+                    try
+                    {
+                        FileInfo fi = new FileInfo(resim.FileName);
+                        var rastgele = Guid.NewGuid().ToString().Substring(0, 5);
+                        var dosyaAdi = fi.Name + rastgele + fi.Extension;
+
+                        resim.SaveAs(klasor + dosyaAdi);
+                        k.ResimURL = dosyaAdi;
+                    }
+                    catch { }
+                }
+            }
+                if (SecilenKonular != null && SecilenKonular.Count == 0)
                 ModelState.AddModelError(string.Empty, "Bir konu seciniz.");
 
             KonuRep kr = new KonuRep();

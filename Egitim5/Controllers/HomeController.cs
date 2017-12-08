@@ -1,4 +1,6 @@
 ﻿using Business;
+using Entity;
+using Entity.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,7 +13,9 @@ namespace Egitim5.Controllers
     {
         public ActionResult Index()
         {
-            return View();
+            KonuRep k = new KonuRep();
+            List<Konu> liste = k.GetAll();
+            return View(liste);
         }
 
         public ActionResult SonMakaleler()
