@@ -11,20 +11,18 @@ namespace Egitim5.Controllers
         // GET: Sikayet
         public ActionResult Index(int? MakaleID,int? KitapID, int? VideoID,Sikayet yeniSikayet)
         {
-            MyContext db = new MyContext();
+            SikayetRep sRep = new SikayetRep();
             if (yeniSikayet.SikayetMesaj!=null&&MakaleID != null)
             {
                 yeniSikayet.IlgiliMakaleID = MakaleID;
                 yeniSikayet.SikayetEdenKullaniciID = User.Identity.GetUserId();
-                db.Sikayetler.Add(yeniSikayet);
-                db.SaveChanges();
+                sRep.Insert(yeniSikayet);
             }
             else if (yeniSikayet.SikayetMesaj != null && KitapID != null)
             {
                 yeniSikayet.IlgiliKitapID = KitapID;
                 yeniSikayet.SikayetEdenKullaniciID = User.Identity.GetUserId();
-                db.Sikayetler.Add(yeniSikayet);
-                db.SaveChanges();
+                sRep.Insert(yeniSikayet);
             }
             return View();
         }
