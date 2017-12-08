@@ -1,6 +1,5 @@
 ﻿using Business;
 using Entity;
-using Entity.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,9 +13,7 @@ namespace Egitim5.Controllers
      
         public ActionResult Index()
         {
-            KonuRep k = new KonuRep();
-            List<Konu> liste = k.GetAll();
-            return View(liste);
+            return View();
         }
         public ActionResult Ara(string aranan)
         {
@@ -54,6 +51,5 @@ namespace Egitim5.Controllers
         {
             return View(new EkitapRep().GetAll().Take(1));
         }
-       
     }
 }

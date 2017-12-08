@@ -28,6 +28,5 @@ namespace Entity.Models
         {
             EklenmeTarihi = DateTime.Now;
         }
-
     }
 }

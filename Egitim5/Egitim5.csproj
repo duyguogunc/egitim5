@@ -44,6 +44,14 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
       <Private>True</Private>
@@ -128,12 +136,6 @@
     <Reference Include="Newtonsoft.Json">
       <HintPath>..\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
-    <Reference Include="EntityFramework">
-      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
-    </Reference>
-    <Reference Include="EntityFramework.SqlServer">
-      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
-    </Reference>
     <Reference Include="Microsoft.AspNet.Identity.Core">
       <HintPath>..\packages\Microsoft.AspNet.Identity.Core.2.2.1\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
     </Reference>
@@ -188,12 +190,16 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\KonuController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+<<<<<<< HEAD
+    <Compile Include="Controllers\YorumController.cs" />
+=======
     <Compile Include="Controllers\SikayetController.cs" />
     <Compile Include="Controllers\VideoController.cs" />
-    <Compile Include="Controllers\YorumController.cs" />
+>>>>>>> 364cedb898becf01efb4579e8ca09ab8e803274f
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
@@ -313,20 +319,8 @@
     <Content Include="Views\Makale\Duzenle.cshtml" />
     <Content Include="Views\Home\SonMakaleler.cshtml" />
     <Content Include="Views\Home\SonKitaplar.cshtml" />
-    <Content Include="Views\Home\Ara.cshtml" />
-    <Content Include="Views\Home\EkitapSonuclar.cshtml" />
-    <Content Include="Views\Home\MakaleSonuclar.cshtml" />
-    <Content Include="Views\Home\VideoSonuclar.cshtml" />
-    <Content Include="Views\Makale\AlakaliMakaleler.cshtml" />
-    <Content Include="Views\Sikayet\Detay.cshtml" />
-    <Content Include="Views\Sikayet\Index.cshtml" />
-    <Content Include="Views\Sikayet\SikayetAdminPanel.cshtml" />
-    <Content Include="Views\Video\Duzenle.cshtml" />
-    <Content Include="Views\Video\Index.cshtml" />
-    <Content Include="Views\Video\VideoEkle.cshtml" />
     <Content Include="Views\Yorum\YorumEkle.cshtml" />
     <Content Include="Views\Yorum\YorumGoruntule.cshtml" />
-    <Content Include="Views\Video\Detail.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -344,22 +338,24 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Business\Business.csproj">
-      <Project>{82917378-C720-407D-B715-6EF07051AFC0}</Project>
+      <Project>{82917378-c720-407d-b715-6ef07051afc0}</Project>
       <Name>Business</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DAL\DAL.csproj">
+      <Project>{1EB955EF-47FF-4742-ADBC-A74721B38719}</Project>
+      <Name>DAL</Name>
     </ProjectReference>
     <ProjectReference Include="..\Entity\Entity.csproj">
       <Project>{C8BDA162-2E73-460E-87DA-9445CE657B93}</Project>
+      <Name>Entity</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Entity\Entity.csproj">
+      <Project>{c8bda162-2e73-460e-87da-9445ce657b93}</Project>
       <Name>Entity</Name>
     </ProjectReference>
     <ProjectReference Include="..\Utility\Utility.csproj">
       <Project>{5c0ff445-422a-4633-b710-313ff289d6cb}</Project>
       <Name>Utility</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Entity\Entity.csproj">
-      <Project>{C8BDA162-2E73-460E-87DA-9445CE657B93}</Project>
-      <Name>Entity</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>

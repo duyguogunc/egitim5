@@ -1,7 +1,5 @@
 ﻿using Business;
-using Entity;
 using Entity.Models;
-using Microsoft.AspNet.Identity;
 using System;
 using System.Web.Mvc;
 
@@ -48,27 +46,11 @@ namespace Egitim5.Controllers
                     Oylama o = new Oylama();
                     VideoRep vRep = new VideoRep();
                     Video selected = vRep.GetById(id);
-                    string isim = User.Identity.GetUserName();
                     if (selected.TotalRate.HasValue)
-                    {
                         selected.TotalRate = selected.TotalRate.Value + points;
-                        o.Oy = points;
-                        o.KullaniciAdi = isim;
-                        o.HangiVideo = selected.Baslik;
-                        rep.Insert(o);
-                    }
-
-
-
                     else
-                    {
                         selected.TotalRate = points;
-                        o.Oy = points;
-                        o.KullaniciAdi = isim;
-                        o.HangiVideo = selected.Baslik;
-                        rep.Insert(o);
-                    }
-                        vRep.Update(selected);
+                    vRep.Update(selected);
                     Session["HasVoted_" + id] = true;
 
                     return Json("Thank you for voting");

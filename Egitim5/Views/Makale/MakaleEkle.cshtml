@@ -1,8 +1,10 @@
-﻿@model Entity.Makale
+﻿@using Entity
+@model Makale
+@{ Layout = null;}
 
-@{
-    ViewBag.Title = "MakaleEkle";
-    Layout = "~/Views/Shared/_Layout.cshtml";
+@if (ViewBag.EklendiMi != null)
+{
+    <div class="alert alert-success">Makale eklendi. <a href="?">Sayfayı yenilemek için tıklayın</a></div>
 }
 <link rel="stylesheet" href="/Content/edit/iEdit.css">
 <script src="//code.jquery.com/jquery-3.1.1.min.js"></script>

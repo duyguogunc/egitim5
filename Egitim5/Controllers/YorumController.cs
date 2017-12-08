@@ -24,7 +24,7 @@ namespace Egitim5.Controllers
             return View();
         }
         YorumRep yrep = new YorumRep();
-        [HttpPost]
+
         public JsonResult YorumYap(Yorum y, string tur, int ID)
         {
 
@@ -33,6 +33,7 @@ namespace Egitim5.Controllers
                 //    if (Session["HasVoted_" + id] == null || (bool)Session["HasVoted_" + id] != true)
                 //    {
                 //Oylama o = new Oylama();
+
                 //OylamaRep orep = new OylamaRep();
                 //Yorum y = new Yorum();
                 y.DiscriptionID = ID;
@@ -49,18 +50,16 @@ namespace Egitim5.Controllers
                 return Json("Bir hata oluştu." + ex.Message);
             }
         }
-    [HttpPost]
-        public ActionResult YorumEkle(Yorum y, string tur, int ID)
-        {
-            y.DiscriptionID = ID;
-            y.Discription = tur;
-            string isim = User.Identity.GetUserName();
-            y.KullaniciAd = isim;
 
-            yrep.Insert(y);
+        //[HttpPost]
+        //public ActionResult YorumEkle(Yorum y)
+        //{
+            
 
-            return View(y);
-        }
+        //    yrep.Insert(y);
+
+        //    return View(y);
+        //}
         [HttpGet]
         public ActionResult YorumGoruntule(Yorum y)
         {

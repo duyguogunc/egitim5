@@ -84,3 +84,21 @@ C:\Users\nuuklu\Source\Repos\egitim5\Business\bin\Debug\roslyn\System.Reflection
 C:\Users\nuuklu\Source\Repos\egitim5\Business\bin\Debug\roslyn\vbc.exe
 C:\Users\nuuklu\Source\Repos\egitim5\Business\bin\Debug\roslyn\VBCSCompiler.exe
 C:\Users\nuuklu\Source\Repos\egitim5\Business\bin\Debug\roslyn\VBCSCompiler.exe.config
+C:\Users\nuuklu\Documents\Visual Studio 2015\Projects\egitim5\Business\bin\Debug\Business.dll.config
+C:\Users\nuuklu\Documents\Visual Studio 2015\Projects\egitim5\Business\bin\Debug\Business.dll
+C:\Users\nuuklu\Documents\Visual Studio 2015\Projects\egitim5\Business\bin\Debug\Business.pdb
+C:\Users\nuuklu\Documents\Visual Studio 2015\Projects\egitim5\Business\bin\Debug\DAL.dll
+C:\Users\nuuklu\Documents\Visual Studio 2015\Projects\egitim5\Business\bin\Debug\Entity.dll
+C:\Users\nuuklu\Documents\Visual Studio 2015\Projects\egitim5\Business\bin\Debug\EntityFramework.dll
+C:\Users\nuuklu\Documents\Visual Studio 2015\Projects\egitim5\Business\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\nuuklu\Documents\Visual Studio 2015\Projects\egitim5\Business\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+C:\Users\nuuklu\Documents\Visual Studio 2015\Projects\egitim5\Business\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\nuuklu\Documents\Visual Studio 2015\Projects\egitim5\Business\bin\Debug\DAL.pdb
+C:\Users\nuuklu\Documents\Visual Studio 2015\Projects\egitim5\Business\bin\Debug\Entity.pdb
+C:\Users\nuuklu\Documents\Visual Studio 2015\Projects\egitim5\Business\bin\Debug\EntityFramework.xml
+C:\Users\nuuklu\Documents\Visual Studio 2015\Projects\egitim5\Business\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\nuuklu\Documents\Visual Studio 2015\Projects\egitim5\Business\bin\Debug\Microsoft.AspNet.Identity.Core.xml
+C:\Users\nuuklu\Documents\Visual Studio 2015\Projects\egitim5\Business\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\nuuklu\Documents\Visual Studio 2015\Projects\egitim5\Business\obj\Debug\Business.csprojResolveAssemblyReference.cache
+C:\Users\nuuklu\Documents\Visual Studio 2015\Projects\egitim5\Business\obj\Debug\Business.dll
+C:\Users\nuuklu\Documents\Visual Studio 2015\Projects\egitim5\Business\obj\Debug\Business.pdb
