@@ -44,7 +44,7 @@ namespace Egitim5.Controllers
             {//id için tanımlı olan Article kaydına points kadar puan ekleyelim  (TotalPoints)
                 if (Session["HasVoted_" + id] == null || (bool)Session["HasVoted_" + id] != true)
                 {
-                    OyRep rep = new OyRep();
+                    OylamaRep rep = new OylamaRep();
                     Oylama o = new Oylama();
                     VideoRep vRep = new VideoRep();
                     Video selected = vRep.GetById(id);

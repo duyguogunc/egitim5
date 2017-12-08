@@ -190,6 +190,7 @@
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\SikayetController.cs" />
     <Compile Include="Controllers\VideoController.cs" />
+    <Compile Include="Controllers\YorumController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -312,6 +313,20 @@
     <Content Include="Views\Makale\Duzenle.cshtml" />
     <Content Include="Views\Home\SonMakaleler.cshtml" />
     <Content Include="Views\Home\SonKitaplar.cshtml" />
+    <Content Include="Views\Home\Ara.cshtml" />
+    <Content Include="Views\Home\EkitapSonuclar.cshtml" />
+    <Content Include="Views\Home\MakaleSonuclar.cshtml" />
+    <Content Include="Views\Home\VideoSonuclar.cshtml" />
+    <Content Include="Views\Makale\AlakaliMakaleler.cshtml" />
+    <Content Include="Views\Sikayet\Detay.cshtml" />
+    <Content Include="Views\Sikayet\Index.cshtml" />
+    <Content Include="Views\Sikayet\SikayetAdminPanel.cshtml" />
+    <Content Include="Views\Video\Duzenle.cshtml" />
+    <Content Include="Views\Video\Index.cshtml" />
+    <Content Include="Views\Video\VideoEkle.cshtml" />
+    <Content Include="Views\Yorum\YorumEkle.cshtml" />
+    <Content Include="Views\Yorum\YorumGoruntule.cshtml" />
+    <Content Include="Views\Video\Detail.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

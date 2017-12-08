@@ -27,6 +27,5 @@ namespace Entity.Models
             IzlenmeSayisi = 0;
             EklenmeTarihi = DateTime.Today;
         }
-        public int? TotalRate { get; set; }
     }
 }
