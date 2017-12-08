@@ -22,12 +22,10 @@ namespace Business
             List<T> liste = db.Set<T>().ToList();
             return liste;
         }
-
         public void DetachList(List<T> liste)
         {
            liste.ForEach(group => db.Entry(group).State = System.Data.Entity.EntityState.Detached);
         }
-
         public T GetById(int id)
         {
             return db.Set<T>().Find(id);

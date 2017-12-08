@@ -12,7 +12,7 @@ namespace DAL.Migrations
     {
         public Configuration()
         {
-            AutomaticMigrationsEnabled = false;
+            AutomaticMigrationsEnabled = true;
             AutomaticMigrationDataLossAllowed = true;
         }
 
@@ -46,6 +46,7 @@ namespace DAL.Migrations
                 mng.Create(videomoderator, "Aa123456!");
                 mng.Create(makalemoderator, "Aa123456!");
                 mng.Create(ekitapmoderator, "Aa123456!");
+                context.SaveChanges();
 
                 #endregion
 
@@ -54,6 +55,7 @@ namespace DAL.Migrations
                 mng.AddToRole(videomoderator.Id, "VideoModerator");
                 mng.AddToRole(makalemoderator.Id, "MakaleModerator");
                 mng.AddToRole(ekitapmoderator.Id, "EKitapModerator");
+                context.SaveChanges();
                 #endregion
 
             }

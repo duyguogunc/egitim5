@@ -1,0 +1,63 @@
+﻿@model IEnumerable<Entity.Models.Yorum>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.KullaniciAd)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ResimURL)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.YorumBaslik)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.YorumIcerik)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.YorumPuan)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DiscriptionID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Discription)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.Display(User.Identity.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ResimURL)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.YorumBaslik)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.YorumIcerik)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.YorumPuan)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DiscriptionID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Discription)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.YorumID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.YorumID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.YorumID })
+        </td>
+    </tr>
+}
+
+</table>

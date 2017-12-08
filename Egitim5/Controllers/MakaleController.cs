@@ -63,6 +63,7 @@ namespace Egitim5.Controllers
         }
         public ActionResult Detay(int id)
         {
+            ViewBag.gelen = "Makale";
             Makale k = new MakaleRep().GetById(id);
             return View(k);
         }

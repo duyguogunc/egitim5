@@ -24,5 +24,7 @@
     }
 </p>
 <hr/>
-@Html.Action("IlgiliMakaleler", new { id = Model.MakaleID });
 
+    @Html.Action("YorumEkle", "Yorum")
+    @Html.Action("YorumGoruntule", "Yorum")
+    @Html.Action("IlgiliMakaleler", new { id = Model.MakaleID });
