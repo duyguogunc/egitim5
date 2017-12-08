@@ -29,5 +29,7 @@ namespace Egitim5.Models
         {
             return new ApplicationDbContext();
         }
+
+        public System.Data.Entity.DbSet<Entity.Models.Yorum> Yorums { get; set; }
     }
 }

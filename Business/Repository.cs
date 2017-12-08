@@ -14,6 +14,6 @@ namespace Business
     public class EkitapRep : BaseRepository<EKitap> { }
     public class KonuRep : BaseRepository<Konu> { }
 
-
+    public class YorumRep : BaseRepository<Yorum> { }
 
 }

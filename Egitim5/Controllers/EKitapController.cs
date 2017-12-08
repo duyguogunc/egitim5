@@ -20,14 +20,12 @@ namespace Egitim5.Controllers
             EkitapRep eRep = new EkitapRep();
             return View(eRep.GetAll().OrderByDescending(x => x.EKitapID).Take(20));
         }
-
         [HttpGet]
         [Authorize(Roles = "Admin, EKitapModerator")]
         public ActionResult KitapEkle()
         {
             return View();
         }
-
         [HttpPost]
         [Authorize(Roles = "Admin, EKitapModerator")]
         [ValidateAntiForgeryToken]
@@ -99,10 +97,10 @@ namespace Egitim5.Controllers
         }
         public ActionResult Detay(int id)
         {
+            ViewBag.gelen = "EKitap";
             EKitap k = new EkitapRep().GetById(id);
             return View(k);
         }
-
         public ActionResult IlgiliKitaplar(int id)
         {
 
@@ -115,7 +113,6 @@ namespace Egitim5.Controllers
             }
             else return View();
         }
-
         [HttpGet]
         [Authorize(Roles = "Admin, EKitapModerator")]
         public ActionResult Duzenle(int id)
@@ -123,7 +120,6 @@ namespace Egitim5.Controllers
             EkitapRep rep = new EkitapRep();
             return View(rep.GetById(id));
         }
-
         [HttpPost]
         [Authorize(Roles = "Admin, EKitapModerator")]
         [ValidateAntiForgeryToken]
@@ -199,6 +195,4 @@ namespace Egitim5.Controllers
             return View();
         }
     }
-
-
 }

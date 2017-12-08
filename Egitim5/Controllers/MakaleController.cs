@@ -1,6 +1,7 @@
 ﻿using Business;
 using Entity;
 using Entity.Models;
+using Microsoft.AspNet.Identity;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -63,6 +64,7 @@ namespace Egitim5.Controllers
         }
         public ActionResult Detay(int id)
         {
+            ViewBag.gelen = "Makale";
             Makale k = new MakaleRep().GetById(id);
             return View(k);
         }
@@ -117,6 +119,5 @@ namespace Egitim5.Controllers
             return View();
         }
     }
-
-
+ 
 }
