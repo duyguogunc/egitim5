@@ -1,250 +1,83 @@
-C:\Users\Wissen\Source\Repos\egitim5\Egitim5\bin\roslyn\csc.exe
-C:\Users\Wissen\Source\Repos\egitim5\Egitim5\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
-C:\Users\Wissen\Source\Repos\egitim5\Egitim5\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
-C:\Users\Wissen\Source\Repos\egitim5\Egitim5\bin\roslyn\Microsoft.CodeAnalysis.dll
-C:\Users\Wissen\Source\Repos\egitim5\Egitim5\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
-C:\Users\Wissen\Source\Repos\egitim5\Egitim5\bin\roslyn\Microsoft.CSharp.Core.targets
-C:\Users\Wissen\Source\Repos\egitim5\Egitim5\bin\roslyn\Microsoft.VisualBasic.Core.targets
-C:\Users\Wissen\Source\Repos\egitim5\Egitim5\bin\roslyn\System.Collections.Immutable.dll
-C:\Users\Wissen\Source\Repos\egitim5\Egitim5\bin\roslyn\System.Reflection.Metadata.dll
-C:\Users\Wissen\Source\Repos\egitim5\Egitim5\bin\roslyn\vbc.exe
-C:\Users\Wissen\Source\Repos\egitim5\Egitim5\bin\roslyn\VBCSCompiler.exe
-C:\Users\Wissen\Source\Repos\egitim5\Egitim5\bin\roslyn\VBCSCompiler.exe.config
-C:\Users\Wissen\Source\Repos\egitim5\Egitim5\bin\Egitim5.dll.config
-C:\Users\Wissen\Source\Repos\egitim5\Egitim5\bin\Egitim5.dll
-C:\Users\Wissen\Source\Repos\egitim5\Egitim5\bin\Egitim5.pdb
-C:\Users\Wissen\Source\Repos\egitim5\Egitim5\bin\Antlr3.Runtime.dll
-C:\Users\Wissen\Source\Repos\egitim5\Egitim5\bin\EntityFramework.dll
-C:\Users\Wissen\Source\Repos\egitim5\Egitim5\bin\EntityFramework.SqlServer.dll
-C:\Users\Wissen\Source\Repos\egitim5\Egitim5\bin\Microsoft.AspNet.Identity.Core.dll
-C:\Users\Wissen\Source\Repos\egitim5\Egitim5\bin\Microsoft.AspNet.Identity.EntityFramework.dll
-C:\Users\Wissen\Source\Repos\egitim5\Egitim5\bin\Microsoft.AspNet.Identity.Owin.dll
-C:\Users\Wissen\Source\Repos\egitim5\Egitim5\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
-C:\Users\Wissen\Source\Repos\egitim5\Egitim5\bin\Microsoft.Owin.dll
-C:\Users\Wissen\Source\Repos\egitim5\Egitim5\bin\Microsoft.Owin.Host.SystemWeb.dll
-C:\Users\Wissen\Source\Repos\egitim5\Egitim5\bin\Microsoft.Owin.Security.Cookies.dll
-C:\Users\Wissen\Source\Repos\egitim5\Egitim5\bin\Microsoft.Owin.Security.dll
-C:\Users\Wissen\Source\Repos\egitim5\Egitim5\bin\Microsoft.Owin.Security.Facebook.dll
-C:\Users\Wissen\Source\Repos\egitim5\Egitim5\bin\Microsoft.Owin.Security.Google.dll
-C:\Users\Wissen\Source\Repos\egitim5\Egitim5\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
-C:\Users\Wissen\Source\Repos\egitim5\Egitim5\bin\Microsoft.Owin.Security.OAuth.dll
-C:\Users\Wissen\Source\Repos\egitim5\Egitim5\bin\Microsoft.Owin.Security.Twitter.dll
-C:\Users\Wissen\Source\Repos\egitim5\Egitim5\bin\Microsoft.Web.Infrastructure.dll
-C:\Users\Wissen\Source\Repos\egitim5\Egitim5\bin\Newtonsoft.Json.dll
-C:\Users\Wissen\Source\Repos\egitim5\Egitim5\bin\Owin.dll
-C:\Users\Wissen\Source\Repos\egitim5\Egitim5\bin\System.Web.Helpers.dll
-C:\Users\Wissen\Source\Repos\egitim5\Egitim5\bin\System.Web.Mvc.dll
-C:\Users\Wissen\Source\Repos\egitim5\Egitim5\bin\System.Web.Optimization.dll
-C:\Users\Wissen\Source\Repos\egitim5\Egitim5\bin\System.Web.Razor.dll
-C:\Users\Wissen\Source\Repos\egitim5\Egitim5\bin\System.Web.WebPages.Deployment.dll
-C:\Users\Wissen\Source\Repos\egitim5\Egitim5\bin\System.Web.WebPages.dll
-C:\Users\Wissen\Source\Repos\egitim5\Egitim5\bin\System.Web.WebPages.Razor.dll
-C:\Users\Wissen\Source\Repos\egitim5\Egitim5\bin\WebGrease.dll
-C:\Users\Wissen\Source\Repos\egitim5\Egitim5\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-C:\Users\Wissen\Source\Repos\egitim5\Egitim5\bin\System.Web.Helpers.xml
-C:\Users\Wissen\Source\Repos\egitim5\Egitim5\bin\System.Web.Mvc.xml
-C:\Users\Wissen\Source\Repos\egitim5\Egitim5\bin\System.Web.Optimization.xml
-C:\Users\Wissen\Source\Repos\egitim5\Egitim5\bin\System.Web.Razor.xml
-C:\Users\Wissen\Source\Repos\egitim5\Egitim5\bin\System.Web.WebPages.xml
-C:\Users\Wissen\Source\Repos\egitim5\Egitim5\bin\System.Web.WebPages.Deployment.xml
-C:\Users\Wissen\Source\Repos\egitim5\Egitim5\bin\System.Web.WebPages.Razor.xml
-C:\Users\Wissen\Source\Repos\egitim5\Egitim5\bin\Antlr3.Runtime.pdb
-C:\Users\Wissen\Source\Repos\egitim5\Egitim5\bin\Newtonsoft.Json.xml
-C:\Users\Wissen\Source\Repos\egitim5\Egitim5\bin\EntityFramework.xml
-C:\Users\Wissen\Source\Repos\egitim5\Egitim5\bin\EntityFramework.SqlServer.xml
-C:\Users\Wissen\Source\Repos\egitim5\Egitim5\bin\Microsoft.AspNet.Identity.Core.xml
-C:\Users\Wissen\Source\Repos\egitim5\Egitim5\bin\Microsoft.AspNet.Identity.Owin.xml
-C:\Users\Wissen\Source\Repos\egitim5\Egitim5\bin\Microsoft.AspNet.Identity.EntityFramework.xml
-C:\Users\Wissen\Source\Repos\egitim5\Egitim5\bin\Microsoft.Owin.xml
-C:\Users\Wissen\Source\Repos\egitim5\Egitim5\bin\Microsoft.Owin.Host.SystemWeb.xml
-C:\Users\Wissen\Source\Repos\egitim5\Egitim5\bin\Microsoft.Owin.Security.xml
-C:\Users\Wissen\Source\Repos\egitim5\Egitim5\bin\Microsoft.Owin.Security.Facebook.xml
-C:\Users\Wissen\Source\Repos\egitim5\Egitim5\bin\Microsoft.Owin.Security.Cookies.xml
-C:\Users\Wissen\Source\Repos\egitim5\Egitim5\bin\Microsoft.Owin.Security.OAuth.xml
-C:\Users\Wissen\Source\Repos\egitim5\Egitim5\bin\Microsoft.Owin.Security.Google.xml
-C:\Users\Wissen\Source\Repos\egitim5\Egitim5\bin\Microsoft.Owin.Security.Twitter.xml
-C:\Users\Wissen\Source\Repos\egitim5\Egitim5\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
-C:\Users\Wissen\Source\Repos\egitim5\Egitim5\obj\Debug\Egitim5.csprojResolveAssemblyReference.cache
-C:\Users\Wissen\Source\Repos\egitim5\Egitim5\obj\Debug\Egitim5.dll
-C:\Users\Wissen\Source\Repos\egitim5\Egitim5\obj\Debug\Egitim5.pdb
-C:\Users\Wissen\Source\Repos\egitim5\Egitim5\bin\Entity.dll
-C:\Users\Wissen\Source\Repos\egitim5\Egitim5\bin\Entity.pdb
-C:\Users\Wissen\Source\Repos\egitim5\Egitim5\bin\DAL.dll
-C:\Users\Wissen\Source\Repos\egitim5\Egitim5\bin\DAL.pdb
-C:\Users\Wissen\Source\Repos\egitim5\Egitim5\bin\Business.dll
-C:\Users\Wissen\Source\Repos\egitim5\Egitim5\bin\System.Net.Http.Formatting.dll
-C:\Users\Wissen\Source\Repos\egitim5\Egitim5\bin\System.Web.Http.dll
-C:\Users\Wissen\Source\Repos\egitim5\Egitim5\bin\System.Web.Http.WebHost.dll
-C:\Users\Wissen\Source\Repos\egitim5\Egitim5\bin\Business.pdb
-C:\Users\Wissen\Source\Repos\egitim5\Egitim5\bin\System.Net.Http.Formatting.xml
-C:\Users\Wissen\Source\Repos\egitim5\Egitim5\bin\System.Web.Http.xml
-C:\Users\Wissen\Source\Repos\egitim5\Egitim5\bin\System.Web.Http.WebHost.xml
-C:\Users\nuuklu\Source\Repos\egitim5\Egitim5\bin\roslyn\csc.exe
-C:\Users\nuuklu\Source\Repos\egitim5\Egitim5\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
-C:\Users\nuuklu\Source\Repos\egitim5\Egitim5\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
-C:\Users\nuuklu\Source\Repos\egitim5\Egitim5\bin\roslyn\Microsoft.CodeAnalysis.dll
-C:\Users\nuuklu\Source\Repos\egitim5\Egitim5\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
-C:\Users\nuuklu\Source\Repos\egitim5\Egitim5\bin\roslyn\Microsoft.CSharp.Core.targets
-C:\Users\nuuklu\Source\Repos\egitim5\Egitim5\bin\roslyn\Microsoft.VisualBasic.Core.targets
-C:\Users\nuuklu\Source\Repos\egitim5\Egitim5\bin\roslyn\System.Collections.Immutable.dll
-C:\Users\nuuklu\Source\Repos\egitim5\Egitim5\bin\roslyn\System.Reflection.Metadata.dll
-C:\Users\nuuklu\Source\Repos\egitim5\Egitim5\bin\roslyn\vbc.exe
-C:\Users\nuuklu\Source\Repos\egitim5\Egitim5\bin\roslyn\VBCSCompiler.exe
-C:\Users\nuuklu\Source\Repos\egitim5\Egitim5\bin\roslyn\VBCSCompiler.exe.config
-C:\Users\nuuklu\Source\Repos\egitim5\Egitim5\bin\Egitim5.dll.config
-C:\Users\nuuklu\Source\Repos\egitim5\Egitim5\bin\Egitim5.dll
-C:\Users\nuuklu\Source\Repos\egitim5\Egitim5\bin\Egitim5.pdb
-C:\Users\nuuklu\Source\Repos\egitim5\Egitim5\bin\Antlr3.Runtime.dll
-C:\Users\nuuklu\Source\Repos\egitim5\Egitim5\bin\Business.dll
-C:\Users\nuuklu\Source\Repos\egitim5\Egitim5\bin\Entity.dll
-C:\Users\nuuklu\Source\Repos\egitim5\Egitim5\bin\EntityFramework.dll
-C:\Users\nuuklu\Source\Repos\egitim5\Egitim5\bin\EntityFramework.SqlServer.dll
-C:\Users\nuuklu\Source\Repos\egitim5\Egitim5\bin\Microsoft.AspNet.Identity.Core.dll
-C:\Users\nuuklu\Source\Repos\egitim5\Egitim5\bin\Microsoft.AspNet.Identity.EntityFramework.dll
-C:\Users\nuuklu\Source\Repos\egitim5\Egitim5\bin\Microsoft.AspNet.Identity.Owin.dll
-C:\Users\nuuklu\Source\Repos\egitim5\Egitim5\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
-C:\Users\nuuklu\Source\Repos\egitim5\Egitim5\bin\Microsoft.Owin.dll
-C:\Users\nuuklu\Source\Repos\egitim5\Egitim5\bin\Microsoft.Owin.Host.SystemWeb.dll
-C:\Users\nuuklu\Source\Repos\egitim5\Egitim5\bin\Microsoft.Owin.Security.Cookies.dll
-C:\Users\nuuklu\Source\Repos\egitim5\Egitim5\bin\Microsoft.Owin.Security.dll
-C:\Users\nuuklu\Source\Repos\egitim5\Egitim5\bin\Microsoft.Owin.Security.Facebook.dll
-C:\Users\nuuklu\Source\Repos\egitim5\Egitim5\bin\Microsoft.Owin.Security.Google.dll
-C:\Users\nuuklu\Source\Repos\egitim5\Egitim5\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
-C:\Users\nuuklu\Source\Repos\egitim5\Egitim5\bin\Microsoft.Owin.Security.OAuth.dll
-C:\Users\nuuklu\Source\Repos\egitim5\Egitim5\bin\Microsoft.Owin.Security.Twitter.dll
-C:\Users\nuuklu\Source\Repos\egitim5\Egitim5\bin\Microsoft.Web.Infrastructure.dll
-C:\Users\nuuklu\Source\Repos\egitim5\Egitim5\bin\Newtonsoft.Json.dll
-C:\Users\nuuklu\Source\Repos\egitim5\Egitim5\bin\Owin.dll
-C:\Users\nuuklu\Source\Repos\egitim5\Egitim5\bin\System.Net.Http.Formatting.dll
-C:\Users\nuuklu\Source\Repos\egitim5\Egitim5\bin\System.Web.Helpers.dll
-C:\Users\nuuklu\Source\Repos\egitim5\Egitim5\bin\System.Web.Http.dll
-C:\Users\nuuklu\Source\Repos\egitim5\Egitim5\bin\System.Web.Http.WebHost.dll
-C:\Users\nuuklu\Source\Repos\egitim5\Egitim5\bin\System.Web.Mvc.dll
-C:\Users\nuuklu\Source\Repos\egitim5\Egitim5\bin\System.Web.Optimization.dll
-C:\Users\nuuklu\Source\Repos\egitim5\Egitim5\bin\System.Web.Razor.dll
-C:\Users\nuuklu\Source\Repos\egitim5\Egitim5\bin\System.Web.WebPages.Deployment.dll
-C:\Users\nuuklu\Source\Repos\egitim5\Egitim5\bin\System.Web.WebPages.dll
-C:\Users\nuuklu\Source\Repos\egitim5\Egitim5\bin\System.Web.WebPages.Razor.dll
-C:\Users\nuuklu\Source\Repos\egitim5\Egitim5\bin\Utility.dll
-C:\Users\nuuklu\Source\Repos\egitim5\Egitim5\bin\WebGrease.dll
-C:\Users\nuuklu\Source\Repos\egitim5\Egitim5\bin\DAL.dll
-C:\Users\nuuklu\Source\Repos\egitim5\Egitim5\bin\Business.pdb
-C:\Users\nuuklu\Source\Repos\egitim5\Egitim5\bin\Entity.pdb
-C:\Users\nuuklu\Source\Repos\egitim5\Egitim5\bin\Utility.pdb
-C:\Users\nuuklu\Source\Repos\egitim5\Egitim5\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-C:\Users\nuuklu\Source\Repos\egitim5\Egitim5\bin\System.Net.Http.Formatting.xml
-C:\Users\nuuklu\Source\Repos\egitim5\Egitim5\bin\System.Web.Http.xml
-C:\Users\nuuklu\Source\Repos\egitim5\Egitim5\bin\System.Web.Http.WebHost.xml
-C:\Users\nuuklu\Source\Repos\egitim5\Egitim5\bin\System.Web.Helpers.xml
-C:\Users\nuuklu\Source\Repos\egitim5\Egitim5\bin\System.Web.Mvc.xml
-C:\Users\nuuklu\Source\Repos\egitim5\Egitim5\bin\System.Web.Optimization.xml
-C:\Users\nuuklu\Source\Repos\egitim5\Egitim5\bin\System.Web.Razor.xml
-C:\Users\nuuklu\Source\Repos\egitim5\Egitim5\bin\System.Web.WebPages.xml
-C:\Users\nuuklu\Source\Repos\egitim5\Egitim5\bin\System.Web.WebPages.Deployment.xml
-C:\Users\nuuklu\Source\Repos\egitim5\Egitim5\bin\System.Web.WebPages.Razor.xml
-C:\Users\nuuklu\Source\Repos\egitim5\Egitim5\bin\Antlr3.Runtime.pdb
-C:\Users\nuuklu\Source\Repos\egitim5\Egitim5\bin\Newtonsoft.Json.xml
-C:\Users\nuuklu\Source\Repos\egitim5\Egitim5\bin\EntityFramework.xml
-C:\Users\nuuklu\Source\Repos\egitim5\Egitim5\bin\EntityFramework.SqlServer.xml
-C:\Users\nuuklu\Source\Repos\egitim5\Egitim5\bin\Microsoft.AspNet.Identity.Core.xml
-C:\Users\nuuklu\Source\Repos\egitim5\Egitim5\bin\Microsoft.AspNet.Identity.Owin.xml
-C:\Users\nuuklu\Source\Repos\egitim5\Egitim5\bin\Microsoft.AspNet.Identity.EntityFramework.xml
-C:\Users\nuuklu\Source\Repos\egitim5\Egitim5\bin\Microsoft.Owin.xml
-C:\Users\nuuklu\Source\Repos\egitim5\Egitim5\bin\Microsoft.Owin.Host.SystemWeb.xml
-C:\Users\nuuklu\Source\Repos\egitim5\Egitim5\bin\Microsoft.Owin.Security.xml
-C:\Users\nuuklu\Source\Repos\egitim5\Egitim5\bin\Microsoft.Owin.Security.Facebook.xml
-C:\Users\nuuklu\Source\Repos\egitim5\Egitim5\bin\Microsoft.Owin.Security.Cookies.xml
-C:\Users\nuuklu\Source\Repos\egitim5\Egitim5\bin\Microsoft.Owin.Security.OAuth.xml
-C:\Users\nuuklu\Source\Repos\egitim5\Egitim5\bin\Microsoft.Owin.Security.Google.xml
-C:\Users\nuuklu\Source\Repos\egitim5\Egitim5\bin\Microsoft.Owin.Security.Twitter.xml
-C:\Users\nuuklu\Source\Repos\egitim5\Egitim5\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
-C:\Users\nuuklu\Source\Repos\egitim5\Egitim5\bin\DAL.pdb
-C:\Users\nuuklu\Source\Repos\egitim5\Egitim5\obj\Debug\Egitim5.csprojResolveAssemblyReference.cache
-C:\Users\nuuklu\Source\Repos\egitim5\Egitim5\obj\Debug\Egitim5.dll
-C:\Users\nuuklu\Source\Repos\egitim5\Egitim5\obj\Debug\Egitim5.pdb
-<<<<<<< HEAD
-C:\Users\nuuklu\Documents\Visual Studio 2015\Projects\egitim5\Egitim5\bin\roslyn\csc.exe
-C:\Users\nuuklu\Documents\Visual Studio 2015\Projects\egitim5\Egitim5\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
-C:\Users\nuuklu\Documents\Visual Studio 2015\Projects\egitim5\Egitim5\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
-C:\Users\nuuklu\Documents\Visual Studio 2015\Projects\egitim5\Egitim5\bin\roslyn\Microsoft.CodeAnalysis.dll
-C:\Users\nuuklu\Documents\Visual Studio 2015\Projects\egitim5\Egitim5\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
-C:\Users\nuuklu\Documents\Visual Studio 2015\Projects\egitim5\Egitim5\bin\roslyn\Microsoft.CSharp.Core.targets
-C:\Users\nuuklu\Documents\Visual Studio 2015\Projects\egitim5\Egitim5\bin\roslyn\Microsoft.VisualBasic.Core.targets
-C:\Users\nuuklu\Documents\Visual Studio 2015\Projects\egitim5\Egitim5\bin\roslyn\System.Collections.Immutable.dll
-C:\Users\nuuklu\Documents\Visual Studio 2015\Projects\egitim5\Egitim5\bin\roslyn\System.Reflection.Metadata.dll
-C:\Users\nuuklu\Documents\Visual Studio 2015\Projects\egitim5\Egitim5\bin\roslyn\vbc.exe
-C:\Users\nuuklu\Documents\Visual Studio 2015\Projects\egitim5\Egitim5\bin\roslyn\VBCSCompiler.exe
-C:\Users\nuuklu\Documents\Visual Studio 2015\Projects\egitim5\Egitim5\bin\roslyn\VBCSCompiler.exe.config
-C:\Users\nuuklu\Documents\Visual Studio 2015\Projects\egitim5\Egitim5\bin\Egitim5.dll.config
-C:\Users\nuuklu\Documents\Visual Studio 2015\Projects\egitim5\Egitim5\bin\Egitim5.dll
-C:\Users\nuuklu\Documents\Visual Studio 2015\Projects\egitim5\Egitim5\bin\Egitim5.pdb
-C:\Users\nuuklu\Documents\Visual Studio 2015\Projects\egitim5\Egitim5\bin\Antlr3.Runtime.dll
-C:\Users\nuuklu\Documents\Visual Studio 2015\Projects\egitim5\Egitim5\bin\Business.dll
-C:\Users\nuuklu\Documents\Visual Studio 2015\Projects\egitim5\Egitim5\bin\Entity.dll
-C:\Users\nuuklu\Documents\Visual Studio 2015\Projects\egitim5\Egitim5\bin\EntityFramework.dll
-C:\Users\nuuklu\Documents\Visual Studio 2015\Projects\egitim5\Egitim5\bin\EntityFramework.SqlServer.dll
-C:\Users\nuuklu\Documents\Visual Studio 2015\Projects\egitim5\Egitim5\bin\Microsoft.AspNet.Identity.Core.dll
-C:\Users\nuuklu\Documents\Visual Studio 2015\Projects\egitim5\Egitim5\bin\Microsoft.AspNet.Identity.EntityFramework.dll
-C:\Users\nuuklu\Documents\Visual Studio 2015\Projects\egitim5\Egitim5\bin\Microsoft.AspNet.Identity.Owin.dll
-C:\Users\nuuklu\Documents\Visual Studio 2015\Projects\egitim5\Egitim5\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
-C:\Users\nuuklu\Documents\Visual Studio 2015\Projects\egitim5\Egitim5\bin\Microsoft.Owin.dll
-C:\Users\nuuklu\Documents\Visual Studio 2015\Projects\egitim5\Egitim5\bin\Microsoft.Owin.Host.SystemWeb.dll
-C:\Users\nuuklu\Documents\Visual Studio 2015\Projects\egitim5\Egitim5\bin\Microsoft.Owin.Security.Cookies.dll
-C:\Users\nuuklu\Documents\Visual Studio 2015\Projects\egitim5\Egitim5\bin\Microsoft.Owin.Security.dll
-C:\Users\nuuklu\Documents\Visual Studio 2015\Projects\egitim5\Egitim5\bin\Microsoft.Owin.Security.Facebook.dll
-C:\Users\nuuklu\Documents\Visual Studio 2015\Projects\egitim5\Egitim5\bin\Microsoft.Owin.Security.Google.dll
-C:\Users\nuuklu\Documents\Visual Studio 2015\Projects\egitim5\Egitim5\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
-C:\Users\nuuklu\Documents\Visual Studio 2015\Projects\egitim5\Egitim5\bin\Microsoft.Owin.Security.OAuth.dll
-C:\Users\nuuklu\Documents\Visual Studio 2015\Projects\egitim5\Egitim5\bin\Microsoft.Owin.Security.Twitter.dll
-C:\Users\nuuklu\Documents\Visual Studio 2015\Projects\egitim5\Egitim5\bin\Microsoft.Web.Infrastructure.dll
-C:\Users\nuuklu\Documents\Visual Studio 2015\Projects\egitim5\Egitim5\bin\Newtonsoft.Json.dll
-C:\Users\nuuklu\Documents\Visual Studio 2015\Projects\egitim5\Egitim5\bin\Owin.dll
-C:\Users\nuuklu\Documents\Visual Studio 2015\Projects\egitim5\Egitim5\bin\System.Net.Http.Formatting.dll
-C:\Users\nuuklu\Documents\Visual Studio 2015\Projects\egitim5\Egitim5\bin\System.Web.Helpers.dll
-C:\Users\nuuklu\Documents\Visual Studio 2015\Projects\egitim5\Egitim5\bin\System.Web.Http.dll
-C:\Users\nuuklu\Documents\Visual Studio 2015\Projects\egitim5\Egitim5\bin\System.Web.Http.WebHost.dll
-C:\Users\nuuklu\Documents\Visual Studio 2015\Projects\egitim5\Egitim5\bin\System.Web.Mvc.dll
-C:\Users\nuuklu\Documents\Visual Studio 2015\Projects\egitim5\Egitim5\bin\System.Web.Optimization.dll
-C:\Users\nuuklu\Documents\Visual Studio 2015\Projects\egitim5\Egitim5\bin\System.Web.Razor.dll
-C:\Users\nuuklu\Documents\Visual Studio 2015\Projects\egitim5\Egitim5\bin\System.Web.WebPages.Deployment.dll
-C:\Users\nuuklu\Documents\Visual Studio 2015\Projects\egitim5\Egitim5\bin\System.Web.WebPages.dll
-C:\Users\nuuklu\Documents\Visual Studio 2015\Projects\egitim5\Egitim5\bin\System.Web.WebPages.Razor.dll
-C:\Users\nuuklu\Documents\Visual Studio 2015\Projects\egitim5\Egitim5\bin\Utility.dll
-C:\Users\nuuklu\Documents\Visual Studio 2015\Projects\egitim5\Egitim5\bin\WebGrease.dll
-C:\Users\nuuklu\Documents\Visual Studio 2015\Projects\egitim5\Egitim5\bin\DAL.dll
-C:\Users\nuuklu\Documents\Visual Studio 2015\Projects\egitim5\Egitim5\bin\Business.pdb
-C:\Users\nuuklu\Documents\Visual Studio 2015\Projects\egitim5\Egitim5\bin\Entity.pdb
-C:\Users\nuuklu\Documents\Visual Studio 2015\Projects\egitim5\Egitim5\bin\Utility.pdb
-C:\Users\nuuklu\Documents\Visual Studio 2015\Projects\egitim5\Egitim5\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-C:\Users\nuuklu\Documents\Visual Studio 2015\Projects\egitim5\Egitim5\bin\System.Net.Http.Formatting.xml
-C:\Users\nuuklu\Documents\Visual Studio 2015\Projects\egitim5\Egitim5\bin\System.Web.Http.xml
-C:\Users\nuuklu\Documents\Visual Studio 2015\Projects\egitim5\Egitim5\bin\System.Web.Http.WebHost.xml
-C:\Users\nuuklu\Documents\Visual Studio 2015\Projects\egitim5\Egitim5\bin\System.Web.Helpers.xml
-C:\Users\nuuklu\Documents\Visual Studio 2015\Projects\egitim5\Egitim5\bin\System.Web.Mvc.xml
-C:\Users\nuuklu\Documents\Visual Studio 2015\Projects\egitim5\Egitim5\bin\System.Web.Optimization.xml
-C:\Users\nuuklu\Documents\Visual Studio 2015\Projects\egitim5\Egitim5\bin\System.Web.Razor.xml
-C:\Users\nuuklu\Documents\Visual Studio 2015\Projects\egitim5\Egitim5\bin\System.Web.WebPages.xml
-C:\Users\nuuklu\Documents\Visual Studio 2015\Projects\egitim5\Egitim5\bin\System.Web.WebPages.Deployment.xml
-C:\Users\nuuklu\Documents\Visual Studio 2015\Projects\egitim5\Egitim5\bin\System.Web.WebPages.Razor.xml
-C:\Users\nuuklu\Documents\Visual Studio 2015\Projects\egitim5\Egitim5\bin\Antlr3.Runtime.pdb
-C:\Users\nuuklu\Documents\Visual Studio 2015\Projects\egitim5\Egitim5\bin\Newtonsoft.Json.xml
-C:\Users\nuuklu\Documents\Visual Studio 2015\Projects\egitim5\Egitim5\bin\EntityFramework.xml
-C:\Users\nuuklu\Documents\Visual Studio 2015\Projects\egitim5\Egitim5\bin\EntityFramework.SqlServer.xml
-C:\Users\nuuklu\Documents\Visual Studio 2015\Projects\egitim5\Egitim5\bin\Microsoft.AspNet.Identity.Core.xml
-C:\Users\nuuklu\Documents\Visual Studio 2015\Projects\egitim5\Egitim5\bin\Microsoft.AspNet.Identity.Owin.xml
-C:\Users\nuuklu\Documents\Visual Studio 2015\Projects\egitim5\Egitim5\bin\Microsoft.AspNet.Identity.EntityFramework.xml
-C:\Users\nuuklu\Documents\Visual Studio 2015\Projects\egitim5\Egitim5\bin\Microsoft.Owin.xml
-C:\Users\nuuklu\Documents\Visual Studio 2015\Projects\egitim5\Egitim5\bin\Microsoft.Owin.Host.SystemWeb.xml
-C:\Users\nuuklu\Documents\Visual Studio 2015\Projects\egitim5\Egitim5\bin\Microsoft.Owin.Security.xml
-C:\Users\nuuklu\Documents\Visual Studio 2015\Projects\egitim5\Egitim5\bin\Microsoft.Owin.Security.Facebook.xml
-C:\Users\nuuklu\Documents\Visual Studio 2015\Projects\egitim5\Egitim5\bin\Microsoft.Owin.Security.Cookies.xml
-C:\Users\nuuklu\Documents\Visual Studio 2015\Projects\egitim5\Egitim5\bin\Microsoft.Owin.Security.OAuth.xml
-C:\Users\nuuklu\Documents\Visual Studio 2015\Projects\egitim5\Egitim5\bin\Microsoft.Owin.Security.Google.xml
-C:\Users\nuuklu\Documents\Visual Studio 2015\Projects\egitim5\Egitim5\bin\Microsoft.Owin.Security.Twitter.xml
-C:\Users\nuuklu\Documents\Visual Studio 2015\Projects\egitim5\Egitim5\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
-C:\Users\nuuklu\Documents\Visual Studio 2015\Projects\egitim5\Egitim5\bin\DAL.pdb
-C:\Users\nuuklu\Documents\Visual Studio 2015\Projects\egitim5\Egitim5\obj\Debug\Egitim5.csprojResolveAssemblyReference.cache
-C:\Users\nuuklu\Documents\Visual Studio 2015\Projects\egitim5\Egitim5\obj\Debug\Egitim5.dll
-C:\Users\nuuklu\Documents\Visual Studio 2015\Projects\egitim5\Egitim5\obj\Debug\Egitim5.pdb
-=======
->>>>>>> 364cedb898becf01efb4579e8ca09ab8e803274f
+C:\Users\Sabiha Çetin\Desktop\Programlarim\gitprojelerim\Egitim5\bin\roslyn\csc.exe
+C:\Users\Sabiha Çetin\Desktop\Programlarim\gitprojelerim\Egitim5\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Sabiha Çetin\Desktop\Programlarim\gitprojelerim\Egitim5\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Sabiha Çetin\Desktop\Programlarim\gitprojelerim\Egitim5\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Sabiha Çetin\Desktop\Programlarim\gitprojelerim\Egitim5\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Sabiha Çetin\Desktop\Programlarim\gitprojelerim\Egitim5\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Sabiha Çetin\Desktop\Programlarim\gitprojelerim\Egitim5\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Sabiha Çetin\Desktop\Programlarim\gitprojelerim\Egitim5\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Sabiha Çetin\Desktop\Programlarim\gitprojelerim\Egitim5\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Sabiha Çetin\Desktop\Programlarim\gitprojelerim\Egitim5\bin\roslyn\vbc.exe
+C:\Users\Sabiha Çetin\Desktop\Programlarim\gitprojelerim\Egitim5\bin\roslyn\VBCSCompiler.exe
+C:\Users\Sabiha Çetin\Desktop\Programlarim\gitprojelerim\Egitim5\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Sabiha Çetin\Desktop\Programlarim\gitprojelerim\Egitim5\bin\Egitim5.dll.config
+C:\Users\Sabiha Çetin\Desktop\Programlarim\gitprojelerim\Egitim5\bin\Egitim5.dll
+C:\Users\Sabiha Çetin\Desktop\Programlarim\gitprojelerim\Egitim5\bin\Egitim5.pdb
+C:\Users\Sabiha Çetin\Desktop\Programlarim\gitprojelerim\Egitim5\bin\Antlr3.Runtime.dll
+C:\Users\Sabiha Çetin\Desktop\Programlarim\gitprojelerim\Egitim5\bin\Business.dll
+C:\Users\Sabiha Çetin\Desktop\Programlarim\gitprojelerim\Egitim5\bin\DAL.dll
+C:\Users\Sabiha Çetin\Desktop\Programlarim\gitprojelerim\Egitim5\bin\Entity.dll
+C:\Users\Sabiha Çetin\Desktop\Programlarim\gitprojelerim\Egitim5\bin\EntityFramework.dll
+C:\Users\Sabiha Çetin\Desktop\Programlarim\gitprojelerim\Egitim5\bin\EntityFramework.SqlServer.dll
+C:\Users\Sabiha Çetin\Desktop\Programlarim\gitprojelerim\Egitim5\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\Sabiha Çetin\Desktop\Programlarim\gitprojelerim\Egitim5\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\Sabiha Çetin\Desktop\Programlarim\gitprojelerim\Egitim5\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\Sabiha Çetin\Desktop\Programlarim\gitprojelerim\Egitim5\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Sabiha Çetin\Desktop\Programlarim\gitprojelerim\Egitim5\bin\Microsoft.Owin.dll
+C:\Users\Sabiha Çetin\Desktop\Programlarim\gitprojelerim\Egitim5\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\Sabiha Çetin\Desktop\Programlarim\gitprojelerim\Egitim5\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Users\Sabiha Çetin\Desktop\Programlarim\gitprojelerim\Egitim5\bin\Microsoft.Owin.Security.dll
+C:\Users\Sabiha Çetin\Desktop\Programlarim\gitprojelerim\Egitim5\bin\Microsoft.Owin.Security.Facebook.dll
+C:\Users\Sabiha Çetin\Desktop\Programlarim\gitprojelerim\Egitim5\bin\Microsoft.Owin.Security.Google.dll
+C:\Users\Sabiha Çetin\Desktop\Programlarim\gitprojelerim\Egitim5\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\Users\Sabiha Çetin\Desktop\Programlarim\gitprojelerim\Egitim5\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\Sabiha Çetin\Desktop\Programlarim\gitprojelerim\Egitim5\bin\Microsoft.Owin.Security.Twitter.dll
+C:\Users\Sabiha Çetin\Desktop\Programlarim\gitprojelerim\Egitim5\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Sabiha Çetin\Desktop\Programlarim\gitprojelerim\Egitim5\bin\Newtonsoft.Json.dll
+C:\Users\Sabiha Çetin\Desktop\Programlarim\gitprojelerim\Egitim5\bin\Owin.dll
+C:\Users\Sabiha Çetin\Desktop\Programlarim\gitprojelerim\Egitim5\bin\System.Net.Http.Formatting.dll
+C:\Users\Sabiha Çetin\Desktop\Programlarim\gitprojelerim\Egitim5\bin\System.Web.Helpers.dll
+C:\Users\Sabiha Çetin\Desktop\Programlarim\gitprojelerim\Egitim5\bin\System.Web.Http.dll
+C:\Users\Sabiha Çetin\Desktop\Programlarim\gitprojelerim\Egitim5\bin\System.Web.Http.WebHost.dll
+C:\Users\Sabiha Çetin\Desktop\Programlarim\gitprojelerim\Egitim5\bin\System.Web.Mvc.dll
+C:\Users\Sabiha Çetin\Desktop\Programlarim\gitprojelerim\Egitim5\bin\System.Web.Optimization.dll
+C:\Users\Sabiha Çetin\Desktop\Programlarim\gitprojelerim\Egitim5\bin\System.Web.Razor.dll
+C:\Users\Sabiha Çetin\Desktop\Programlarim\gitprojelerim\Egitim5\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Sabiha Çetin\Desktop\Programlarim\gitprojelerim\Egitim5\bin\System.Web.WebPages.dll
+C:\Users\Sabiha Çetin\Desktop\Programlarim\gitprojelerim\Egitim5\bin\System.Web.WebPages.Razor.dll
+C:\Users\Sabiha Çetin\Desktop\Programlarim\gitprojelerim\Egitim5\bin\Utility.dll
+C:\Users\Sabiha Çetin\Desktop\Programlarim\gitprojelerim\Egitim5\bin\WebGrease.dll
+C:\Users\Sabiha Çetin\Desktop\Programlarim\gitprojelerim\Egitim5\bin\Business.pdb
+C:\Users\Sabiha Çetin\Desktop\Programlarim\gitprojelerim\Egitim5\bin\DAL.pdb
+C:\Users\Sabiha Çetin\Desktop\Programlarim\gitprojelerim\Egitim5\bin\Entity.pdb
+C:\Users\Sabiha Çetin\Desktop\Programlarim\gitprojelerim\Egitim5\bin\Utility.pdb
+C:\Users\Sabiha Çetin\Desktop\Programlarim\gitprojelerim\Egitim5\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Sabiha Çetin\Desktop\Programlarim\gitprojelerim\Egitim5\bin\System.Net.Http.Formatting.xml
+C:\Users\Sabiha Çetin\Desktop\Programlarim\gitprojelerim\Egitim5\bin\System.Web.Http.xml
+C:\Users\Sabiha Çetin\Desktop\Programlarim\gitprojelerim\Egitim5\bin\System.Web.Http.WebHost.xml
+C:\Users\Sabiha Çetin\Desktop\Programlarim\gitprojelerim\Egitim5\bin\System.Web.Helpers.xml
+C:\Users\Sabiha Çetin\Desktop\Programlarim\gitprojelerim\Egitim5\bin\System.Web.Mvc.xml
+C:\Users\Sabiha Çetin\Desktop\Programlarim\gitprojelerim\Egitim5\bin\System.Web.Optimization.xml
+C:\Users\Sabiha Çetin\Desktop\Programlarim\gitprojelerim\Egitim5\bin\System.Web.Razor.xml
+C:\Users\Sabiha Çetin\Desktop\Programlarim\gitprojelerim\Egitim5\bin\System.Web.WebPages.xml
+C:\Users\Sabiha Çetin\Desktop\Programlarim\gitprojelerim\Egitim5\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Sabiha Çetin\Desktop\Programlarim\gitprojelerim\Egitim5\bin\System.Web.WebPages.Razor.xml
+C:\Users\Sabiha Çetin\Desktop\Programlarim\gitprojelerim\Egitim5\bin\Antlr3.Runtime.pdb
+C:\Users\Sabiha Çetin\Desktop\Programlarim\gitprojelerim\Egitim5\bin\Newtonsoft.Json.xml
+C:\Users\Sabiha Çetin\Desktop\Programlarim\gitprojelerim\Egitim5\bin\EntityFramework.xml
+C:\Users\Sabiha Çetin\Desktop\Programlarim\gitprojelerim\Egitim5\bin\EntityFramework.SqlServer.xml
+C:\Users\Sabiha Çetin\Desktop\Programlarim\gitprojelerim\Egitim5\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\Sabiha Çetin\Desktop\Programlarim\gitprojelerim\Egitim5\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\Sabiha Çetin\Desktop\Programlarim\gitprojelerim\Egitim5\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\Sabiha Çetin\Desktop\Programlarim\gitprojelerim\Egitim5\bin\Microsoft.Owin.xml
+C:\Users\Sabiha Çetin\Desktop\Programlarim\gitprojelerim\Egitim5\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\Sabiha Çetin\Desktop\Programlarim\gitprojelerim\Egitim5\bin\Microsoft.Owin.Security.xml
+C:\Users\Sabiha Çetin\Desktop\Programlarim\gitprojelerim\Egitim5\bin\Microsoft.Owin.Security.Facebook.xml
+C:\Users\Sabiha Çetin\Desktop\Programlarim\gitprojelerim\Egitim5\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\Sabiha Çetin\Desktop\Programlarim\gitprojelerim\Egitim5\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\Sabiha Çetin\Desktop\Programlarim\gitprojelerim\Egitim5\bin\Microsoft.Owin.Security.Google.xml
+C:\Users\Sabiha Çetin\Desktop\Programlarim\gitprojelerim\Egitim5\bin\Microsoft.Owin.Security.Twitter.xml
+C:\Users\Sabiha Çetin\Desktop\Programlarim\gitprojelerim\Egitim5\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Users\Sabiha Çetin\Desktop\Programlarim\gitprojelerim\Egitim5\obj\Debug\Egitim5.csprojResolveAssemblyReference.cache
+C:\Users\Sabiha Çetin\Desktop\Programlarim\gitprojelerim\Egitim5\obj\Debug\Egitim5.dll
+C:\Users\Sabiha Çetin\Desktop\Programlarim\gitprojelerim\Egitim5\obj\Debug\Egitim5.pdb

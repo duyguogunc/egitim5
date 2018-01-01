@@ -38,3 +38,16 @@ C:\Users\nuuklu\Documents\Visual Studio 2015\Projects\egitim5\Entity\bin\Debug\M
 C:\Users\nuuklu\Documents\Visual Studio 2015\Projects\egitim5\Entity\obj\Debug\Entity.csprojResolveAssemblyReference.cache
 C:\Users\nuuklu\Documents\Visual Studio 2015\Projects\egitim5\Entity\obj\Debug\Entity.dll
 C:\Users\nuuklu\Documents\Visual Studio 2015\Projects\egitim5\Entity\obj\Debug\Entity.pdb
+C:\Users\Sabiha Çetin\Desktop\Programlarim\gitprojelerim\Entity\bin\Debug\Entity.dll
+C:\Users\Sabiha Çetin\Desktop\Programlarim\gitprojelerim\Entity\bin\Debug\Entity.pdb
+C:\Users\Sabiha Çetin\Desktop\Programlarim\gitprojelerim\Entity\bin\Debug\EntityFramework.dll
+C:\Users\Sabiha Çetin\Desktop\Programlarim\gitprojelerim\Entity\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Sabiha Çetin\Desktop\Programlarim\gitprojelerim\Entity\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+C:\Users\Sabiha Çetin\Desktop\Programlarim\gitprojelerim\Entity\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\Sabiha Çetin\Desktop\Programlarim\gitprojelerim\Entity\bin\Debug\EntityFramework.xml
+C:\Users\Sabiha Çetin\Desktop\Programlarim\gitprojelerim\Entity\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Sabiha Çetin\Desktop\Programlarim\gitprojelerim\Entity\bin\Debug\Microsoft.AspNet.Identity.Core.xml
+C:\Users\Sabiha Çetin\Desktop\Programlarim\gitprojelerim\Entity\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\Sabiha Çetin\Desktop\Programlarim\gitprojelerim\Entity\obj\Debug\Entity.csprojResolveAssemblyReference.cache
+C:\Users\Sabiha Çetin\Desktop\Programlarim\gitprojelerim\Entity\obj\Debug\Entity.dll
+C:\Users\Sabiha Çetin\Desktop\Programlarim\gitprojelerim\Entity\obj\Debug\Entity.pdb

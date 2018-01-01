@@ -102,3 +102,21 @@ C:\Users\nuuklu\Documents\Visual Studio 2015\Projects\egitim5\Business\bin\Debug
 C:\Users\nuuklu\Documents\Visual Studio 2015\Projects\egitim5\Business\obj\Debug\Business.csprojResolveAssemblyReference.cache
 C:\Users\nuuklu\Documents\Visual Studio 2015\Projects\egitim5\Business\obj\Debug\Business.dll
 C:\Users\nuuklu\Documents\Visual Studio 2015\Projects\egitim5\Business\obj\Debug\Business.pdb
+C:\Users\Sabiha Çetin\Desktop\Programlarim\gitprojelerim\Business\bin\Debug\Business.dll.config
+C:\Users\Sabiha Çetin\Desktop\Programlarim\gitprojelerim\Business\bin\Debug\Business.dll
+C:\Users\Sabiha Çetin\Desktop\Programlarim\gitprojelerim\Business\bin\Debug\Business.pdb
+C:\Users\Sabiha Çetin\Desktop\Programlarim\gitprojelerim\Business\bin\Debug\DAL.dll
+C:\Users\Sabiha Çetin\Desktop\Programlarim\gitprojelerim\Business\bin\Debug\Entity.dll
+C:\Users\Sabiha Çetin\Desktop\Programlarim\gitprojelerim\Business\bin\Debug\EntityFramework.dll
+C:\Users\Sabiha Çetin\Desktop\Programlarim\gitprojelerim\Business\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Sabiha Çetin\Desktop\Programlarim\gitprojelerim\Business\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+C:\Users\Sabiha Çetin\Desktop\Programlarim\gitprojelerim\Business\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\Sabiha Çetin\Desktop\Programlarim\gitprojelerim\Business\bin\Debug\DAL.pdb
+C:\Users\Sabiha Çetin\Desktop\Programlarim\gitprojelerim\Business\bin\Debug\Entity.pdb
+C:\Users\Sabiha Çetin\Desktop\Programlarim\gitprojelerim\Business\bin\Debug\EntityFramework.xml
+C:\Users\Sabiha Çetin\Desktop\Programlarim\gitprojelerim\Business\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Sabiha Çetin\Desktop\Programlarim\gitprojelerim\Business\bin\Debug\Microsoft.AspNet.Identity.Core.xml
+C:\Users\Sabiha Çetin\Desktop\Programlarim\gitprojelerim\Business\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\Sabiha Çetin\Desktop\Programlarim\gitprojelerim\Business\obj\Debug\Business.csprojResolveAssemblyReference.cache
+C:\Users\Sabiha Çetin\Desktop\Programlarim\gitprojelerim\Business\obj\Debug\Business.dll
+C:\Users\Sabiha Çetin\Desktop\Programlarim\gitprojelerim\Business\obj\Debug\Business.pdb

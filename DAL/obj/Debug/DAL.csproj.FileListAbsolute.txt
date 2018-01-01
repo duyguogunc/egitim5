@@ -144,3 +144,21 @@ C:\Users\nuuklu\Documents\Visual Studio 2015\Projects\egitim5\DAL\bin\Debug\Enti
 C:\Users\nuuklu\Documents\Visual Studio 2015\Projects\egitim5\DAL\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\nuuklu\Documents\Visual Studio 2015\Projects\egitim5\DAL\bin\Debug\Microsoft.AspNet.Identity.Core.xml
 C:\Users\nuuklu\Documents\Visual Studio 2015\Projects\egitim5\DAL\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\Sabiha Çetin\Desktop\Programlarim\gitprojelerim\DAL\bin\Debug\DAL.dll.config
+C:\Users\Sabiha Çetin\Desktop\Programlarim\gitprojelerim\DAL\bin\Debug\DAL.dll
+C:\Users\Sabiha Çetin\Desktop\Programlarim\gitprojelerim\DAL\bin\Debug\DAL.pdb
+C:\Users\Sabiha Çetin\Desktop\Programlarim\gitprojelerim\DAL\bin\Debug\Entity.dll
+C:\Users\Sabiha Çetin\Desktop\Programlarim\gitprojelerim\DAL\bin\Debug\EntityFramework.dll
+C:\Users\Sabiha Çetin\Desktop\Programlarim\gitprojelerim\DAL\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Sabiha Çetin\Desktop\Programlarim\gitprojelerim\DAL\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+C:\Users\Sabiha Çetin\Desktop\Programlarim\gitprojelerim\DAL\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\Sabiha Çetin\Desktop\Programlarim\gitprojelerim\DAL\bin\Debug\Utility.dll
+C:\Users\Sabiha Çetin\Desktop\Programlarim\gitprojelerim\DAL\bin\Debug\Entity.pdb
+C:\Users\Sabiha Çetin\Desktop\Programlarim\gitprojelerim\DAL\bin\Debug\Utility.pdb
+C:\Users\Sabiha Çetin\Desktop\Programlarim\gitprojelerim\DAL\bin\Debug\EntityFramework.xml
+C:\Users\Sabiha Çetin\Desktop\Programlarim\gitprojelerim\DAL\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Sabiha Çetin\Desktop\Programlarim\gitprojelerim\DAL\bin\Debug\Microsoft.AspNet.Identity.Core.xml
+C:\Users\Sabiha Çetin\Desktop\Programlarim\gitprojelerim\DAL\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\Sabiha Çetin\Desktop\Programlarim\gitprojelerim\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
+C:\Users\Sabiha Çetin\Desktop\Programlarim\gitprojelerim\DAL\obj\Debug\DAL.dll
+C:\Users\Sabiha Çetin\Desktop\Programlarim\gitprojelerim\DAL\obj\Debug\DAL.pdb
